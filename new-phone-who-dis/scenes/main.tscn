@@ -1,12 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://d4fcn2e8yiomf"]
+[gd_scene load_steps=10 format=3 uid="uid://d4fcn2e8yiomf"]
 
 [ext_resource type="Texture2D" uid="uid://b4hrwgkmvlmdj" path="res://images/icons8-settings-50-0CCE6B.png" id="1_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://cmb6w2h80yo6f" path="res://scenes/message_with_contact.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cmb6w2h80yo6f" path="res://scenes/contact.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://u181dkwfqb85" path="res://scripts/search_bar.gd" id="2_85g3d"]
+[ext_resource type="Script" uid="uid://f4530de140nn" path="res://scripts/settings.gd" id="3_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://dfyv37tioa6mf" path="res://scenes/purple_text.tscn" id="4_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://dnd2uyg2ruxms" path="res://scenes/green_text.tscn" id="5_tefeu"]
-
-[sub_resource type="ImageTexture" id="ImageTexture_ig7tw"]
+[ext_resource type="Script" uid="uid://do3e4ldyqejfj" path="res://scripts/game_manager.gd" id="6_tefeu"]
+[ext_resource type="Script" uid="uid://c0fwdldoayhqb" path="res://scripts/contacts_list_button.gd" id="6_tipki"]
 
 [node name="main" type="Control"]
 layout_mode = 3
@@ -17,24 +19,39 @@ offset_left = 2.0
 offset_right = 2.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
+
+[node name="GameManager" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+script = ExtResource("6_tefeu")
 
 [node name="BackgroundColor" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 1200.0
 offset_bottom = 720.0
+mouse_filter = 1
 color = Color(0.0278246, 0.0278245, 0.0278245, 1)
 
 [node name="SearchBar" type="LineEdit" parent="BackgroundColor"]
+top_level = true
 custom_minimum_size = Vector2(0, 31)
 layout_mode = 0
 offset_left = 33.0
 offset_top = 31.0
 offset_right = 323.0
 offset_bottom = 62.0
+theme_override_colors/font_placeholder_color = Color(0.673164, 0.673164, 0.673164, 1)
+theme_override_constants/outline_size = 2
 placeholder_text = "Search"
-right_icon = SubResource("ImageTexture_ig7tw")
+keep_editing_on_text_submit = true
+emoji_menu_enabled = false
+script = ExtResource("2_85g3d")
 
 [node name="SettingsButton" type="TextureButton" parent="BackgroundColor"]
+top_level = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
 offset_left = 351.0
@@ -42,13 +59,16 @@ offset_top = 21.0
 offset_right = 401.0
 offset_bottom = 71.0
 texture_normal = ExtResource("1_0wfyh")
+script = ExtResource("3_o6xl0")
 
 [node name="ContactMessageLeft" type="Control" parent="BackgroundColor"]
+unique_name_in_owner = true
 layout_mode = 1
 anchor_right = 0.36
 anchor_bottom = 1.0
 offset_right = -3.05176e-05
 grow_vertical = 2
+mouse_filter = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="MessagesLabel" type="RichTextLabel" parent="BackgroundColor/ContactMessageLeft"]
@@ -64,71 +84,72 @@ text = "[b]Messages[/b]"
 [node name="ContactMessageScrollContainer" type="ScrollContainer" parent="BackgroundColor/ContactMessageLeft"]
 custom_minimum_size = Vector2(330, 500)
 layout_mode = 0
-offset_left = 20.0
+offset_left = 12.0
 offset_top = 134.0
 offset_right = 429.0
 offset_bottom = 703.0
 
-[node name="Messages" type="VBoxContainer" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer"]
+[node name="Contacts" type="VBoxContainer" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 15
 
-[node name="MessageWithContact" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+[node name="MessageWithContact" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("1_ig7tw")]
 layout_mode = 2
 
-[node name="HSeparator" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages"]
+[node name="HSeparator" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
 layout_mode = 2
 
-[node name="MessageWithContact2" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+[node name="MessageWithContact2" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("1_ig7tw")]
 layout_mode = 2
 
-[node name="HSeparator2" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages"]
+[node name="HSeparator2" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
 layout_mode = 2
 
-[node name="MessageWithContact3" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+[node name="MessageWithContact3" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("1_ig7tw")]
 layout_mode = 2
 
-[node name="HSeparator3" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages"]
+[node name="HSeparator3" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
 layout_mode = 2
 
-[node name="MessageWithContact4" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+[node name="MessageWithContact4" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("1_ig7tw")]
 layout_mode = 2
 
-[node name="HSeparator4" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages"]
+[node name="HSeparator4" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
 layout_mode = 2
 
-[node name="MessageWithContact5" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+[node name="MessageWithContact5" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("1_ig7tw")]
 layout_mode = 2
 
-[node name="HSeparator5" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages"]
+[node name="HSeparator5" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
 layout_mode = 2
 
-[node name="MessageWithContact6" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+[node name="MessageWithContact6" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("1_ig7tw")]
 layout_mode = 2
 
-[node name="HSeparator6" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages"]
+[node name="HSeparator6" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
 layout_mode = 2
 
-[node name="MessageWithContact7" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+[node name="MessageWithContact7" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("1_ig7tw")]
 layout_mode = 2
 
-[node name="HSeparator7" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages"]
+[node name="HSeparator7" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
 layout_mode = 2
 
-[node name="MessageWithContact8" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+[node name="MessageWithContact8" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("1_ig7tw")]
 layout_mode = 2
 
-[node name="HSeparator8" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages"]
+[node name="HSeparator8" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
 layout_mode = 2
 
-[node name="MessageWithContact9" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+[node name="MessageWithContact9" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("1_ig7tw")]
 layout_mode = 2
 
-[node name="HSeparator9" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Messages"]
+[node name="HSeparator9" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
 layout_mode = 2
 
 [node name="MessageFieldRight" type="Control" parent="BackgroundColor"]
+unique_name_in_owner = true
 layout_mode = 1
 anchor_left = 0.36
 anchor_right = 1.0
@@ -153,7 +174,7 @@ anchor_bottom = 0.106944
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundColor/MessageFieldRight/Header"]
+[node name="Header" type="RichTextLabel" parent="BackgroundColor/MessageFieldRight/Header"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -175,7 +196,7 @@ offset_top = -4.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="TextureButton" type="TextureButton" parent="BackgroundColor/MessageFieldRight/Header"]
+[node name="ContactsListButton" type="TextureButton" parent="BackgroundColor/MessageFieldRight/Header"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.87826
@@ -188,6 +209,7 @@ texture_normal = ExtResource("3_sugp2")
 ignore_texture_size = true
 stretch_mode = 4
 flip_v = true
+script = ExtResource("6_tipki")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="BackgroundColor/MessageFieldRight"]
@@ -277,3 +299,7 @@ layout_mode = 2
 
 [node name="SenderText6" parent="BackgroundColor/MessageFieldRight/TextField/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_tbgi4")]
 layout_mode = 2
+
+[connection signal="text_submitted" from="BackgroundColor/SearchBar" to="BackgroundColor/SearchBar" method="_on_text_submitted"]
+[connection signal="pressed" from="BackgroundColor/SettingsButton" to="BackgroundColor/SettingsButton" method="_on_pressed"]
+[connection signal="pressed" from="BackgroundColor/MessageFieldRight/Header/ContactsListButton" to="BackgroundColor/MessageFieldRight/Header/ContactsListButton" method="_on_pressed"]
