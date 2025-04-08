@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmb6w2h80yo6f"]
+[gd_scene load_steps=3 format=3 uid="uid://cmb6w2h80yo6f"]
 
 [ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="1_7au3x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bffxa"]
 
 [node name="MessageWithContact" type="Control"]
 custom_minimum_size = Vector2(330, 100)
@@ -68,3 +70,13 @@ text = "This is a testing message, we are testing the length of this message, in
 autowrap_mode = 3
 clip_text = true
 text_overrun_behavior = 3
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bffxa")
+flat = true

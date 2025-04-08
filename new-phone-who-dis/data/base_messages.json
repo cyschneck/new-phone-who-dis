@@ -1,0 +1,20 @@
+{
+  "contact 1": {
+	"contact_name": "Honeylick",
+	"number": "303-123-4567",
+	"messages": {
+	  "base_message1": "this is a test from contact 1",
+	  "base_message2": "this is the second message2-1",
+	  "base_messsage3": "this is the third message3-1"
+	}
+  },
+  "contact 2": {
+	"contact_name": "Loudermilk",
+	"number": "303-891-0123",
+	"messages": {
+	  "base_message1": "this is a much longer test from another contact, specifically, from contact 2",
+	  "base_message2": "this is the second message2-2",
+	  "base_messsage3": "this is the third message3-2"
+	}
+  }
+}

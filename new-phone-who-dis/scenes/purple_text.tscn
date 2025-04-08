@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dfyv37tioa6mf"]
+
+[node name="SenderText" type="Label"]
+size_flags_horizontal = 0
+text = "this string has thirty-nine characters.
+this string has thirty-nine characters.
+this string has thirty-nine characters.
+this string has thirty-nine characters."
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = -10
+theme_override_constants/margin_top = -10
+theme_override_constants/margin_right = -10
+theme_override_constants/margin_bottom = -10
+
+[node name="Purple" type="ColorRect" parent="MarginContainer"]
+show_behind_parent = true
+layout_mode = 2
+color = Color(0.372549, 0.392157, 1, 1)
+
+[node name="Green" type="ColorRect" parent="MarginContainer"]
+visible = false
+show_behind_parent = true
+layout_mode = 2
+color = Color(0.0313726, 0.568627, 0.290196, 1)
