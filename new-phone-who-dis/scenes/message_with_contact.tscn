@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmb6w2h80yo6f"]
+
+[ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="1_7au3x"]
+
+[node name="MessageWithContact" type="Control"]
+custom_minimum_size = Vector2(330, 100)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 52.0
+offset_bottom = 31.0
+grow_vertical = 2
+texture = ExtResource("1_7au3x")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(330, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.172932
+anchor_top = -0.02
+anchor_right = 1.0
+anchor_bottom = 1.03
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Contact" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Contact"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Contact" type="RichTextLabel" parent="VBoxContainer/Contact/HBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[b]303-555-5050[/b]"
+
+[node name="Timestamp" type="RichTextLabel" parent="VBoxContainer/Contact/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[i]3:30pm[/i]    "
+horizontal_alignment = 2
+
+[node name="Message" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(330, 75)
+layout_mode = 2
+size_flags_vertical = 3
+text = "This is a testing message, we are testing the length of this message, indeed we are, yes yes, indeed, yes yes. I wonder if the overflowing the text"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 3

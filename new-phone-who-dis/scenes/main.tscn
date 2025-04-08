@@ -1,0 +1,148 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4fcn2e8yiomf"]
+
+[ext_resource type="PackedScene" uid="uid://cmb6w2h80yo6f" path="res://scenes/message_with_contact.tscn" id="1_ig7tw"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_ig7tw"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1200.0
+offset_bottom = 720.0
+color = Color(0.0278246, 0.0278245, 0.0278245, 1)
+
+[node name="SearchBar" type="LineEdit" parent="BackgroundColor"]
+custom_minimum_size = Vector2(290, 31)
+layout_mode = 0
+offset_left = 33.0
+offset_top = 31.0
+offset_right = 322.0
+offset_bottom = 62.0
+placeholder_text = "Search"
+right_icon = SubResource("ImageTexture_ig7tw")
+
+[node name="MessagesLabel" type="RichTextLabel" parent="BackgroundColor"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 85.0
+offset_right = 156.0
+offset_bottom = 132.0
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]Messages[/b]"
+
+[node name="HSeparator" type="HSeparator" parent="BackgroundColor"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.361667
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 0.105556
+offset_bottom = 3.59445
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VSeparator" type="VSeparator" parent="BackgroundColor"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -169.0
+offset_right = -165.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MessageScrollContainer" type="ScrollContainer" parent="BackgroundColor"]
+custom_minimum_size = Vector2(330, 500)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 134.0
+offset_right = 429.0
+offset_bottom = 703.0
+
+[node name="Messages" type="VBoxContainer" parent="BackgroundColor/MessageScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
+
+[node name="MessageWithContact" parent="BackgroundColor/MessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="BackgroundColor/MessageScrollContainer/Messages"]
+layout_mode = 2
+
+[node name="MessageWithContact2" parent="BackgroundColor/MessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="BackgroundColor/MessageScrollContainer/Messages"]
+layout_mode = 2
+
+[node name="MessageWithContact3" parent="BackgroundColor/MessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="BackgroundColor/MessageScrollContainer/Messages"]
+layout_mode = 2
+
+[node name="MessageWithContact4" parent="BackgroundColor/MessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="HSeparator4" type="HSeparator" parent="BackgroundColor/MessageScrollContainer/Messages"]
+layout_mode = 2
+
+[node name="MessageWithContact5" parent="BackgroundColor/MessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="HSeparator5" type="HSeparator" parent="BackgroundColor/MessageScrollContainer/Messages"]
+layout_mode = 2
+
+[node name="MessageWithContact6" parent="BackgroundColor/MessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="HSeparator6" type="HSeparator" parent="BackgroundColor/MessageScrollContainer/Messages"]
+layout_mode = 2
+
+[node name="MessageWithContact7" parent="BackgroundColor/MessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="HSeparator7" type="HSeparator" parent="BackgroundColor/MessageScrollContainer/Messages"]
+layout_mode = 2
+
+[node name="MessageWithContact8" parent="BackgroundColor/MessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="HSeparator8" type="HSeparator" parent="BackgroundColor/MessageScrollContainer/Messages"]
+layout_mode = 2
+
+[node name="MessageWithContact9" parent="BackgroundColor/MessageScrollContainer/Messages" instance=ExtResource("1_ig7tw")]
+layout_mode = 2
+
+[node name="Header" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 435.0
+offset_top = 1.0
+offset_right = 1199.0
+offset_bottom = 74.0
+
+[node name="HeaderContact" type="RichTextLabel" parent="Header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]303-555-5050[/b]"
+horizontal_alignment = 1
+vertical_alignment = 1
