@@ -4,7 +4,7 @@ const BASE_MESSAGES_JSON = "res://data/base_messages.json"
 var base_messages_data: Dictionary = {} # JSON data for each button
 
 @onready var contact_message_left: Control = %ContactMessageLeft
-const CONTACT_PREFAB = preload("res://scenes/contact.tscn")
+const CONTACT_PREFAB = preload("res://scenes/contact_with_last_message.tscn")
 
 func _ready() -> void:
 	# setup game on start based on datafiles

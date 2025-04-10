@@ -1,0 +1,241 @@
+[gd_scene load_steps=8 format=3 uid="uid://ccvwhhb8t2b4t"]
+
+[ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="1_qox0p"]
+[ext_resource type="Texture2D" uid="uid://b4hrwgkmvlmdj" path="res://images/icons8-settings-50-0CCE6B.png" id="2_wh874"]
+[ext_resource type="Script" uid="uid://y6u5vl3vri6l" path="res://scripts/contacts_left_list.gd" id="3_jhufo"]
+[ext_resource type="Script" uid="uid://f4530de140nn" path="res://scripts/settings.gd" id="3_xvsa3"]
+[ext_resource type="PackedScene" uid="uid://c5rfdd52g1a61" path="res://scenes/contact_name.tscn" id="4_wh874"]
+[ext_resource type="Script" uid="uid://dj31ytbbfujgm" path="res://scripts/full_contact_right.gd" id="5_xvsa3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yld4j"]
+load_path = "res://.godot/imported/IMG_0094.png-2e45ab915b02aa3e66d785e90e12f125.ctex"
+
+[node name="contacts" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.027451, 0.027451, 0.027451, 1)
+
+[node name="SearchBar" type="LineEdit" parent="BackgroundColor"]
+top_level = true
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_left = 33.0
+offset_top = 31.0
+offset_right = 323.0
+offset_bottom = 62.0
+theme_override_colors/font_placeholder_color = Color(0.673164, 0.673164, 0.673164, 1)
+theme_override_constants/outline_size = 2
+placeholder_text = "Search"
+keep_editing_on_text_submit = true
+emoji_menu_enabled = false
+
+[node name="SettingsButton" type="TextureButton" parent="BackgroundColor"]
+top_level = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 351.0
+offset_top = 21.0
+offset_right = 401.0
+offset_bottom = 71.0
+texture_normal = ExtResource("2_wh874")
+script = ExtResource("3_xvsa3")
+
+[node name="ContactsLeftList" type="Control" parent="BackgroundColor"]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_right = 0.3125
+anchor_bottom = 1.0
+offset_right = 57.0
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("3_jhufo")
+metadata/_edit_use_anchors_ = true
+
+[node name="ContactsLabel" type="RichTextLabel" parent="BackgroundColor/ContactsLeftList"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 85.0
+offset_right = 156.0
+offset_bottom = 132.0
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]Contacts[/b]"
+
+[node name="ContactsScrollContainer" type="ScrollContainer" parent="BackgroundColor/ContactsLeftList"]
+custom_minimum_size = Vector2(330, 500)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.177778
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_right = 12.0
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Contacts" type="VBoxContainer" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="HSeparator" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName2" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName3" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator4" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName4" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator5" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName5" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator6" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName6" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator7" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName7" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator8" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName8" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator9" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName9" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator10" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName10" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator11" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName11" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator12" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="FullContactRight" type="Control" parent="BackgroundColor"]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 0.374167
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_xvsa3")
+metadata/_edit_use_anchors_ = true
+
+[node name="VSeparator" type="VSeparator" parent="BackgroundColor/FullContactRight"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 4.0
+grow_vertical = 2
+
+[node name="TopFrame" type="Control" parent="BackgroundColor/FullContactRight"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 3.0
+offset_bottom = 414.0
+grow_horizontal = 2
+
+[node name="BackgroundColor" type="ColorRect" parent="BackgroundColor/FullContactRight/TopFrame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.129412, 0.133333, 0.0901961, 1)
+
+[node name="HeaderContact" type="VBoxContainer" parent="BackgroundColor/FullContactRight/TopFrame"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -108.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="BackgroundColor/FullContactRight/TopFrame/HeaderContact"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_qox0p")
+stretch_mode = 4
+
+[node name="ContactName" type="RichTextLabel" parent="BackgroundColor/FullContactRight/TopFrame/HeaderContact"]
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]Contact Name[/b]"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="BackgroundColor/FullContactRight/TopFrame"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Img0094" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(606, 417)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("CompressedTexture2D_yld4j")
+
+[connection signal="text_submitted" from="BackgroundColor/SearchBar" to="BackgroundColor/SearchBar" method="_on_text_submitted"]
+[connection signal="pressed" from="BackgroundColor/SettingsButton" to="BackgroundColor/SettingsButton" method="_on_pressed"]

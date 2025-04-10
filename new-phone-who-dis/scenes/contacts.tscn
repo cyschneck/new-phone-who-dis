@@ -1,0 +1,466 @@
+[gd_scene load_steps=8 format=3 uid="uid://ccvwhhb8t2b4t"]
+
+[ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="1_qox0p"]
+[ext_resource type="Script" uid="uid://cfmtt801jgikh" path="res://scripts/contacts_manager.gd" id="1_wh874"]
+[ext_resource type="Texture2D" uid="uid://b4hrwgkmvlmdj" path="res://images/icons8-settings-50-0CCE6B.png" id="2_wh874"]
+[ext_resource type="Script" uid="uid://f4530de140nn" path="res://scripts/settings.gd" id="3_xvsa3"]
+[ext_resource type="PackedScene" uid="uid://c5rfdd52g1a61" path="res://scenes/contact_name.tscn" id="4_wh874"]
+[ext_resource type="Script" uid="uid://da3kvyqflppek" path="res://scripts/return_to_messages.gd" id="6_ag4hj"]
+[ext_resource type="PackedScene" uid="uid://dy6mcnphodghq" path="res://scenes/select_number_on_popup.tscn" id="6_xvsa3"]
+
+[node name="contacts" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.027451, 0.027451, 0.027451, 1)
+
+[node name="ContactsManager" type="Control" parent="BackgroundColor" groups=["managers"]]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_wh874")
+
+[node name="SearchBar" type="LineEdit" parent="BackgroundColor"]
+top_level = true
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_left = 33.0
+offset_top = 31.0
+offset_right = 323.0
+offset_bottom = 62.0
+theme_override_colors/font_placeholder_color = Color(0.673164, 0.673164, 0.673164, 1)
+theme_override_constants/outline_size = 2
+placeholder_text = "Search Contacts"
+keep_editing_on_text_submit = true
+emoji_menu_enabled = false
+
+[node name="SettingsButton" type="TextureButton" parent="BackgroundColor"]
+top_level = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 351.0
+offset_top = 21.0
+offset_right = 401.0
+offset_bottom = 71.0
+texture_normal = ExtResource("2_wh874")
+script = ExtResource("3_xvsa3")
+
+[node name="ContactsLeftList" type="Control" parent="BackgroundColor"]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_right = 0.3125
+anchor_bottom = 1.0
+offset_right = 57.0
+grow_vertical = 2
+mouse_filter = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ContactsLabel" type="RichTextLabel" parent="BackgroundColor/ContactsLeftList"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 85.0
+offset_right = 156.0
+offset_bottom = 132.0
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]Contacts[/b]"
+
+[node name="ContactsScrollContainer" type="ScrollContainer" parent="BackgroundColor/ContactsLeftList"]
+custom_minimum_size = Vector2(330, 500)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.177778
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_right = 12.0
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Contacts" type="VBoxContainer" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="HSeparator" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName3" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator4" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName4" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator5" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName5" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator6" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName6" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator7" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName7" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator8" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName8" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator9" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName9" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator10" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName10" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator11" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="ContactName11" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_wh874")]
+layout_mode = 2
+
+[node name="HSeparator12" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="FullContactRight" type="Control" parent="BackgroundColor"]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 0.374167
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VSeparator" type="VSeparator" parent="BackgroundColor/FullContactRight"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 4.0
+grow_vertical = 2
+
+[node name="TopFrame" type="Control" parent="BackgroundColor/FullContactRight"]
+layout_mode = 1
+anchor_left = 0.00399467
+anchor_right = 1.0
+anchor_bottom = 0.475
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="BackgroundColor" type="ColorRect" parent="BackgroundColor/FullContactRight/TopFrame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.129412, 0.133333, 0.0901961, 1)
+
+[node name="HeaderContact" type="VBoxContainer" parent="BackgroundColor/FullContactRight/TopFrame"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -108.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Icon" type="TextureRect" parent="BackgroundColor/FullContactRight/TopFrame/HeaderContact"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_qox0p")
+stretch_mode = 4
+
+[node name="HeaderContactName" type="RichTextLabel" parent="BackgroundColor/FullContactRight/TopFrame/HeaderContact"]
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]Contact Name[/b]"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Phone Number" type="RichTextLabel" parent="BackgroundColor/FullContactRight/TopFrame/HeaderContact"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.354563, 0.354563, 0.354563, 1)
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]720-555-5555[/b]"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SelectNumber" type="Button" parent="BackgroundColor/FullContactRight/TopFrame/HeaderContact/Phone Number"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="HSeparator" type="HSeparator" parent="BackgroundColor/FullContactRight/TopFrame"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="BottomFrame" type="Control" parent="BackgroundColor/FullContactRight"]
+layout_mode = 1
+anchor_top = 0.475
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColor/FullContactRight/BottomFrame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="BottomDescriptions" type="VBoxContainer" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Notes" type="VBoxContainer" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescriptions"]
+layout_mode = 2
+
+[node name="Notes" type="RichTextLabel" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescriptions/Notes"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b]Notes:[/b]"
+fit_content = true
+
+[node name="Description" type="RichTextLabel" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescriptions/Notes"]
+layout_mode = 2
+text = "Text Description"
+fit_content = true
+
+[node name="Ringtone" type="VBoxContainer" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescriptions"]
+layout_mode = 2
+
+[node name="Ringtone" type="RichTextLabel" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescriptions/Ringtone"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b]Ringtone:[/b]"
+fit_content = true
+
+[node name="Description" type="RichTextLabel" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescriptions/Ringtone"]
+layout_mode = 2
+text = "Bell Tower"
+fit_content = true
+
+[node name="ColorRect" type="ColorRect" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescriptions/Ringtone"]
+layout_mode = 2
+
+[node name="ReturnToMessages" type="TextureButton" parent="BackgroundColor/FullContactRight"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -81.0
+offset_top = 10.0
+offset_right = -21.0
+offset_bottom = 70.0
+grow_horizontal = 0
+texture_normal = ExtResource("1_qox0p")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("6_ag4hj")
+
+[node name="PhoneSelectPopup" type="Control" parent="BackgroundColor"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundColor" type="ColorRect" parent="BackgroundColor/PhoneSelectPopup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.167106, 0.186669, 0.157219, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColor/PhoneSelectPopup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BackgroundColor/PhoneSelectPopup/MarginContainer"]
+layout_mode = 2
+
+[node name="AllRemainingNumbers" type="VBoxContainer" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SelectNumber" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber2" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber3" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber4" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator4" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber5" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator5" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber6" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator6" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber7" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator7" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber8" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator8" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber9" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator9" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber10" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator10" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber11" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator11" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber12" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator12" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber13" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator13" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber14" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator14" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber15" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator15" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[node name="SelectNumber16" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers" instance=ExtResource("6_xvsa3")]
+layout_mode = 2
+
+[node name="HSeparator16" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/MarginContainer/ScrollContainer/AllRemainingNumbers"]
+layout_mode = 2
+
+[connection signal="pressed" from="BackgroundColor/SettingsButton" to="BackgroundColor/SettingsButton" method="_on_pressed"]
+[connection signal="pressed" from="BackgroundColor/FullContactRight/TopFrame/HeaderContact/Phone Number/SelectNumber" to="BackgroundColor/ContactsManager" method="_on_select_number_pressed"]
+[connection signal="pressed" from="BackgroundColor/FullContactRight/ReturnToMessages" to="BackgroundColor/FullContactRight/ReturnToMessages" method="_on_pressed"]

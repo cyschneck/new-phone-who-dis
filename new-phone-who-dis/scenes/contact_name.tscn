@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5rfdd52g1a61"]
+
+[ext_resource type="Script" uid="uid://ceaian03u260l" path="res://scripts/contact_name.gd" id="1_b2j38"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vw0rh"]
+
+[node name="ContactName" type="RichTextLabel"]
+custom_minimum_size = Vector2(0, 45)
+offset_right = 166.0
+offset_bottom = 42.0
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[b]Contact Name[/b]"
+fit_content = true
+vertical_alignment = 1
+script = ExtResource("1_b2j38")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vw0rh")
+flat = true
+
+[node name="SelectionColor" type="ColorRect" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.10048, 0.42196, 0.384882, 1)
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
