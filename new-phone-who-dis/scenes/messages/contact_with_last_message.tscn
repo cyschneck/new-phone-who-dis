@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cmb6w2h80yo6f"]
 
-[ext_resource type="Script" uid="uid://yxcxfj6v4rdp" path="res://scripts/contacts/message_with_contact.gd" id="1_ichj6"]
+[ext_resource type="Script" uid="uid://yxcxfj6v4rdp" path="res://scripts/contacts/select_message.gd" id="1_ichj6"]
 [ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="2_8bwgx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ichj6"]

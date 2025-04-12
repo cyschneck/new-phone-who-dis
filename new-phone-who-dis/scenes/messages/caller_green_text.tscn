@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dnd2uyg2ruxms"]
 
-[ext_resource type="PackedScene" uid="uid://dfyv37tioa6mf" path="res://scenes/messages/purple_text.tscn" id="1_6wxsr"]
+[ext_resource type="PackedScene" uid="uid://dfyv37tioa6mf" path="res://scenes/messages/sender_purple_text.tscn" id="1_6wxsr"]
 
 [node name="ContactText" instance=ExtResource("1_6wxsr")]
 size_flags_horizontal = 8

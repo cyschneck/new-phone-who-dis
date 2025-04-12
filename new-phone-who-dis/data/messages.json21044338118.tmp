@@ -1,0 +1,91 @@
+{
+  "contact 1": {
+	"contact_name": "Loudermilk",
+	"number": "303-123-4567",
+	"messages": {
+	  "caller1": "you owe me a new phone, idiot",
+	  "sender1": "new phone, who dis?",
+	  "sender2": "just kidding, but I don't think your contacts transfered over, my bad",
+	  "sender3": "everything should be unlocked tho"
+	}
+  },
+  "contact 2": {
+	"contact_name": "Fakemilk",
+	"number": "303-891-0123",
+	"messages": {
+	  "sender1": "this is the second message2-2",
+	  "sender2": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
+	  "caller1": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
+	}
+  },
+  "contact 3": {
+	"contact_name": "Quietmilk",
+	"number": "303-333-333",
+	"messages": {
+	  "sender1": "now we are at contact 3, and this is a medium sized message, not too long",
+	  "caller1": "this is the second message2-2",
+	  "sender2": "this is the third message3-2"
+	}
+  },
+  "contact 4": {
+	"contact_name": "NoisyMilk",
+	"number": "303-444-4444",
+	"messages": {
+	  "sender1": "contact 4",
+	  "sender2": "this is the second message2-2",
+	  "caller1": "this is the third message3-2"
+	}
+  },
+  "contact 5": {
+	"contact_name": "Sombermilk",
+	"number": "303-555-5555",
+	"messages": {
+	  "sender1": "contact 5",
+	  "sender2": "this is the second message2-2",
+	}
+  },
+  "contact 6": {
+	"contact_name": "Depressedmilk",
+	"number": "303-666-666",
+	"messages": {
+	  "sender1": "contact six",
+	  "caller1": "this is the second message2-2",
+	}
+  },
+  "contact 7": {
+	"contact_name": "Evenloudermilk",
+	"number": "303-777-7777",
+	"messages": {
+	  "caller1": "contact seven",
+	  "caller2": "this is the second message2-2",
+	  "caller3": "this is the third message3-2"
+	}
+  },
+  "contact 8": {
+	"contact_name": "Loudestmilk",
+	"number": "303-888-8888",
+	"messages": {
+	  "sender1":"contact eight",
+	  "caller1": "this is the second message2-2",
+	  "sender2": "this is the third message3-2"
+	}
+  },
+  "contact 9": {
+	"contact_name": "Wholemlik",
+	"number": "303-999-9999",
+	"messages": {
+	  "sender1": "contact nine",
+	  "sender2": "this is the second message2-2",
+	  "caller1": "this is the third message3-2"
+	}
+  },
+  "contact 10": {
+	"contact_name": "Oatmilk",
+	"number": "303-101-0101",
+	"messages": {
+	  "caller1": "contact ten",
+	  "sender1": "this is the second message2-2",
+	  "caller2": "this is the third message3-2"
+	}
+  },
+}

@@ -97,12 +97,6 @@ theme_override_constants/separation = 5
 [node name="HSeparator" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
 layout_mode = 2
 
-[node name="HSeparator2" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
-layout_mode = 2
-
-[node name="HSeparator3" type="HSeparator" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts"]
-layout_mode = 2
-
 [node name="ContactName3" parent="BackgroundColor/ContactsLeftList/ContactsScrollContainer/Contacts" instance=ExtResource("4_q0cfa")]
 layout_mode = 2
 
@@ -322,6 +316,7 @@ script = ExtResource("6_gt0pa")
 
 [node name="PhoneSelectPopup" type="Control" parent="BackgroundColor"]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 1
 anchors_preset = 8
@@ -336,7 +331,7 @@ offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BackgroundColor" type="ColorRect" parent="BackgroundColor/PhoneSelectPopup"]
+[node name="BackgroundColor" type="ColorRect" parent="BackgroundColor/PhoneSelectPopup" groups=["managers"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
