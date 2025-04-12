@@ -1,37 +1,43 @@
 [gd_scene load_steps=4 format=3 uid="uid://cmb6w2h80yo6f"]
 
-[ext_resource type="Script" uid="uid://yxcxfj6v4rdp" path="res://scripts/message_with_contact.gd" id="1_s2kr4"]
-[ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="2_w0lvf"]
+[ext_resource type="Script" uid="uid://yxcxfj6v4rdp" path="res://scripts/contacts/message_with_contact.gd" id="1_ichj6"]
+[ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="2_8bwgx"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bffxa"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ichj6"]
+bg_color = Color(0.176471, 0.682353, 0.568627, 1)
 
 [node name="MessageWithContact" type="Control"]
 custom_minimum_size = Vector2(330, 100)
 layout_mode = 3
-anchors_preset = 0
-script = ExtResource("1_s2kr4")
+anchor_right = 0.331667
+anchor_bottom = 0.138889
+script = ExtResource("1_ichj6")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
+offset_left = 9.0
 offset_top = -20.0
-offset_right = 52.0
+offset_right = 61.0
 offset_bottom = 31.0
 grow_vertical = 2
-texture = ExtResource("2_w0lvf")
+texture = ExtResource("2_8bwgx")
 expand_mode = 3
 stretch_mode = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(330, 100)
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.172932
+anchor_left = 0.173367
 anchor_top = -0.02
-anchor_right = 1.0
+anchor_right = 0.977387
 anchor_bottom = 1.03
+offset_top = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
@@ -65,7 +71,7 @@ text = "[i]3:30pm[/i]    "
 horizontal_alignment = 2
 
 [node name="Message" type="Label" parent="VBoxContainer"]
-custom_minimum_size = Vector2(330, 75)
+custom_minimum_size = Vector2(320, 75)
 layout_mode = 2
 size_flags_vertical = 3
 text = "This is a testing message, we are testing the length of this message, indeed we are, yes yes, indeed, yes yes. I wonder if the overflowing the text"
@@ -74,13 +80,19 @@ clip_text = true
 text_overrun_behavior = 3
 
 [node name="Button" type="Button" parent="."]
+show_behind_parent = true
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = -0.1
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 1.1
+offset_top = -5.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_bffxa")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ichj6")
+toggle_mode = true
 flat = true
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

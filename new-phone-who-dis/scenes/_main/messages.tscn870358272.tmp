@@ -1,0 +1,304 @@
+[gd_scene load_steps=10 format=3 uid="uid://d4fcn2e8yiomf"]
+
+[ext_resource type="Script" uid="uid://do3e4ldyqejfj" path="res://scripts/messages/game_manager.gd" id="1_dppxf"]
+[ext_resource type="Script" uid="uid://u181dkwfqb85" path="res://scripts/messages/search_bar.gd" id="2_jy8bd"]
+[ext_resource type="Texture2D" uid="uid://b4hrwgkmvlmdj" path="res://images/icons8-settings-50-0CCE6B.png" id="3_bdw3y"]
+[ext_resource type="Script" uid="uid://f4530de140nn" path="res://scripts/settings.gd" id="4_d67uv"]
+[ext_resource type="PackedScene" uid="uid://cmb6w2h80yo6f" path="res://scenes/messages/contact_with_last_message.tscn" id="5_dvosh"]
+[ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="6_l0wf5"]
+[ext_resource type="Script" uid="uid://c0fwdldoayhqb" path="res://scripts/messages/contacts_list_button.gd" id="7_wevnu"]
+[ext_resource type="PackedScene" uid="uid://dfyv37tioa6mf" path="res://scenes/messages/purple_text.tscn" id="8_agf8l"]
+[ext_resource type="PackedScene" uid="uid://dnd2uyg2ruxms" path="res://scenes/messages/green_text.tscn" id="9_sgs8y"]
+
+[node name="messages" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="GameManager" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+script = ExtResource("1_dppxf")
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1200.0
+offset_bottom = 720.0
+mouse_filter = 1
+color = Color(0.0278246, 0.0278245, 0.0278245, 1)
+
+[node name="SearchBar" type="LineEdit" parent="BackgroundColor"]
+top_level = true
+custom_minimum_size = Vector2(0, 31)
+layout_mode = 0
+offset_left = 33.0
+offset_top = 31.0
+offset_right = 323.0
+offset_bottom = 62.0
+theme_override_colors/font_placeholder_color = Color(0.673164, 0.673164, 0.673164, 1)
+theme_override_constants/outline_size = 2
+placeholder_text = "Search Messages"
+keep_editing_on_text_submit = true
+emoji_menu_enabled = false
+script = ExtResource("2_jy8bd")
+
+[node name="SettingsButton" type="TextureButton" parent="BackgroundColor"]
+top_level = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 351.0
+offset_top = 21.0
+offset_right = 401.0
+offset_bottom = 71.0
+texture_normal = ExtResource("3_bdw3y")
+script = ExtResource("4_d67uv")
+
+[node name="ContactMessageLeft" type="Control" parent="BackgroundColor"]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_right = 0.36
+anchor_bottom = 1.0
+offset_right = -3.05176e-05
+grow_vertical = 2
+mouse_filter = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MessagesLabel" type="RichTextLabel" parent="BackgroundColor/ContactMessageLeft"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 85.0
+offset_right = 156.0
+offset_bottom = 132.0
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]Messages[/b]"
+
+[node name="ContactMessageScrollContainer" type="ScrollContainer" parent="BackgroundColor/ContactMessageLeft"]
+custom_minimum_size = Vector2(330, 500)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 134.0
+offset_right = 429.0
+offset_bottom = 703.0
+
+[node name="Contacts" type="VBoxContainer" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
+
+[node name="MessageWithContact" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("5_dvosh")]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="MessageWithContact2" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("5_dvosh")]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="MessageWithContact3" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("5_dvosh")]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="MessageWithContact4" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("5_dvosh")]
+layout_mode = 2
+
+[node name="HSeparator4" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="MessageWithContact5" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("5_dvosh")]
+layout_mode = 2
+
+[node name="HSeparator5" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="MessageWithContact6" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("5_dvosh")]
+layout_mode = 2
+
+[node name="HSeparator6" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="MessageWithContact7" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("5_dvosh")]
+layout_mode = 2
+
+[node name="HSeparator7" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="MessageWithContact8" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("5_dvosh")]
+layout_mode = 2
+
+[node name="HSeparator8" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="MessageWithContact9" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts" instance=ExtResource("5_dvosh")]
+layout_mode = 2
+
+[node name="HSeparator9" type="HSeparator" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer/Contacts"]
+layout_mode = 2
+
+[node name="MessageFieldRight" type="Control" parent="BackgroundColor"]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 0.36
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.05176e-05
+grow_horizontal = 0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VSeparator" type="VSeparator" parent="BackgroundColor/MessageFieldRight"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 4.0
+grow_vertical = 2
+
+[node name="Header" type="Control" parent="BackgroundColor/MessageFieldRight"]
+layout_mode = 1
+anchor_left = 0.00520833
+anchor_right = 1.0
+anchor_bottom = 0.116667
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Header" type="RichTextLabel" parent="BackgroundColor/MessageFieldRight/Header"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 77.0
+grow_horizontal = 2
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]303-555-5050[/b]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="BackgroundColor/MessageFieldRight/Header"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ContactsListButton" type="TextureButton" parent="BackgroundColor/MessageFieldRight/Header"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -93.9257
+offset_top = -28.4998
+offset_right = -33.9257
+offset_bottom = 31.5002
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("6_l0wf5")
+ignore_texture_size = true
+stretch_mode = 4
+flip_v = true
+script = ExtResource("7_wevnu")
+
+[node name="Label" type="Label" parent="BackgroundColor/MessageFieldRight"]
+visible = false
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 299.0
+offset_top = 501.0
+offset_right = -336.0
+offset_bottom = -196.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Textbox testing 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColor/MessageFieldRight/Label"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = -10
+theme_override_constants/margin_top = -10
+theme_override_constants/margin_right = -10
+theme_override_constants/margin_bottom = -10
+
+[node name="ColorRect" type="ColorRect" parent="BackgroundColor/MessageFieldRight/Label/MarginContainer"]
+show_behind_parent = true
+layout_mode = 2
+color = Color(0.372549, 0.392157, 1, 1)
+
+[node name="TextField" type="Control" parent="BackgroundColor/MessageFieldRight"]
+layout_mode = 1
+anchor_top = 0.116667
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BackgroundColor/MessageFieldRight/TextField"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundColor/MessageFieldRight/TextField/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundColor/MessageFieldRight/TextField/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 35
+metadata/_edit_use_anchors_ = true
+
+[node name="SenderText" parent="BackgroundColor/MessageFieldRight/TextField/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_agf8l")]
+layout_mode = 2
+
+[node name="ContactText" parent="BackgroundColor/MessageFieldRight/TextField/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("9_sgs8y")]
+layout_mode = 2
+
+[node name="SenderText2" parent="BackgroundColor/MessageFieldRight/TextField/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_agf8l")]
+layout_mode = 2
+
+[node name="SenderText4" parent="BackgroundColor/MessageFieldRight/TextField/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_agf8l")]
+layout_mode = 2
+
+[node name="SenderText5" parent="BackgroundColor/MessageFieldRight/TextField/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("8_agf8l")]
+layout_mode = 2
+
+[connection signal="text_submitted" from="BackgroundColor/SearchBar" to="BackgroundColor/SearchBar" method="_on_text_submitted"]
+[connection signal="pressed" from="BackgroundColor/SettingsButton" to="BackgroundColor/SettingsButton" method="_on_pressed"]
+[connection signal="pressed" from="BackgroundColor/MessageFieldRight/Header/ContactsListButton" to="BackgroundColor/MessageFieldRight/Header/ContactsListButton" method="_on_pressed"]

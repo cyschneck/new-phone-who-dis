@@ -3,8 +3,8 @@ extends Control
 const CONTACT_LIST_JSON = "res://data/contact_list.json"
 var contact_list_data: Dictionary = {} # JSON data for contact
 
-const CONTACT_NAME_PREFAB = preload("res://scenes/contact_name.tscn")
-const SELECT_NUMBER_ON_POPUP_PREFAB = preload("res://scenes/select_number_on_popup.tscn")
+const CONTACT_NAME_PREFAB = preload("res://scenes/contacts/contact_name.tscn")
+const SELECT_NUMBER_ON_POPUP_PREFAB = preload("res://scenes/contacts/select_number_on_popup.tscn")
 
 @onready var contacts_left_list: Control = %ContactsLeftList
 @onready var full_contact_right: Control = %FullContactRight
@@ -23,7 +23,7 @@ func _ready() -> void:
 	populate_contacts_list() # wait until fully populated
 	
 	# hide popup on start
-	var popup_phone_numbers = phone_select_popup.get_child(1).get_child(0).get_child(0)
+	var popup_phone_numbers = phone_select_popup.get_child(1).get_child(0)
 	for number in popup_phone_numbers.get_children():
 		number.queue_free()
 	phone_select_popup.visible = false
@@ -40,7 +40,7 @@ func populate_contacts_list() -> void:
 	for contact in sorted_contacts:
 		var new_contact_name = CONTACT_NAME_PREFAB.instantiate()
 		var contact_data = contact_list_data[contact]
-		var full_name = contact_data["first_name"]
+		var full_name = "  " + contact_data["first_name"]
 		# add bold around part of name used for sorting
 		if contact_data["last_name"] != "":
 			full_name += " [b]" + contact_data["last_name"] + "[/b]"
@@ -86,7 +86,7 @@ func populate_number_selection() -> void:
 		possible_numbers.append(contact_list_data[contact]["number"])
 	possible_numbers.sort() # sort numbers
 
-	var popup = phone_select_popup.get_child(1).get_child(0).get_child(0)
+	var popup = phone_select_popup.get_child(1).get_child(0)
 	var top_h_sep = HSeparator.new()
 	popup.add_child(top_h_sep)
 	for number in possible_numbers:

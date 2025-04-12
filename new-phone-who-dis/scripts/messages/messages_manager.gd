@@ -4,7 +4,7 @@ const BASE_MESSAGES_JSON = "res://data/base_messages.json"
 var base_messages_data: Dictionary = {} # JSON data for each button
 
 @onready var contact_message_left: Control = %ContactMessageLeft
-const CONTACT_PREFAB = preload("res://scenes/contact_with_last_message.tscn")
+const CONTACT_PREFAB = preload("res://scenes/messages/contact_with_last_message.tscn")
 
 func _ready() -> void:
 	# setup game on start based on datafiles
@@ -22,6 +22,8 @@ func _ready() -> void:
 
 func populate_contacts_message_list() -> void:
 	var contacts = contact_message_left.get_child(1).get_child(0)
+	var top_h_sep = HSeparator.new()
+	contacts.add_child(top_h_sep)
 	for contact in base_messages_data.keys():
 		var new_contact = CONTACT_PREFAB.instantiate()
 		var contact_name = new_contact.get_child(1).get_child(0).get_child(0).get_child(0)
@@ -35,6 +37,11 @@ func populate_contacts_message_list() -> void:
 		contacts.add_child(new_contact)
 		var new_h_sep = HSeparator.new()
 		contacts.add_child(new_h_sep)
+
+func highlight_first_element() -> void:
+	#var contacts_list = contact_message_left.get_child(1).get_child(0)
+	#var first_contact = contacts_list.get_child(1)
+	pass
 
 ## JSON DATA
 func load_json_data(file_path: String):

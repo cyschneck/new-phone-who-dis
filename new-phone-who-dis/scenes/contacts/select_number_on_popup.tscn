@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dy6mcnphodghq"]
+[gd_scene load_steps=3 format=3 uid="uid://dy6mcnphodghq"]
 
-[ext_resource type="Script" uid="uid://deyy1od03rb6u" path="res://scenes/select_number_on_popup.gd" id="1_rgis7"]
+[ext_resource type="Script" uid="uid://deyy1od03rb6u" path="res://scripts/contacts/select_number_on_popup.gd" id="1_60cxh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_60cxh"]
+bg_color = Color(0.176471, 0.682353, 0.568627, 1)
 
 [node name="SelectNumber" type="RichTextLabel"]
 anchors_preset = 15
@@ -14,15 +17,17 @@ text = "[b]303-555-5555[/b]"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
-script = ExtResource("1_rgis7")
+script = ExtResource("1_60cxh")
 
 [node name="Button" type="Button" parent="."]
+show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_60cxh")
 flat = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
