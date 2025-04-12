@@ -10,6 +10,8 @@ const POPUP_VALUE = preload("res://scenes/contacts/popup_value.tscn")
 @onready var full_contact_right: Control = %FullContactRight
 @onready var phone_select_popup: Control = %PhoneSelectPopup
 
+var contacts_dict: Dictionary
+
 func _ready() -> void:
 	## LOAD DATA
 	load_json_data(CONTACT_LIST_JSON)
@@ -40,13 +42,21 @@ func populate_contacts_list() -> void:
 	for contact in sorted_contacts:
 		var new_contact_name = CONTACT_NAME_PREFAB.instantiate()
 		var contact_data = contact_list_data[contact]
+		
+		# setup contacts key
+		var dict_key = contact_data["first_name"]
+		if contact_data["last_name"] != "":
+			dict_key += " " + contact_data["last_name"]
+		contacts_dict[dict_key] = ""
+		new_contact_name.name = dict_key
+
+		# setup bolded text on contacts
 		var full_name = "  " + contact_data["first_name"]
 		# add bold around part of name used for sorting
 		if contact_data["last_name"] != "":
 			full_name += " [b]" + contact_data["last_name"] + "[/b]"
 		else:
 			full_name = "[b]" + full_name + "[/b]"
-		new_contact_name.name = full_name
 		new_contact_name.text = full_name
 		new_contact_name.first_name = contact_data["first_name"]
 		new_contact_name.last_name = contact_data["last_name"]
@@ -87,8 +97,6 @@ func populate_number_selection() -> void:
 	possible_numbers.sort() # sort numbers
 
 	var popup = phone_select_popup.get_child(1).get_child(0)
-	var top_h_sep = HSeparator.new()
-	popup.add_child(top_h_sep)
 	for number in possible_numbers:
 		var new_number = POPUP_VALUE.instantiate()
 		new_number.name = number
@@ -100,3 +108,6 @@ func populate_number_selection() -> void:
 func _on_select_number_pressed() -> void:
 	# display popup
 	phone_select_popup.visible = true
+
+func _on_close_popup_pressed() -> void:
+	phone_select_popup.visible = false

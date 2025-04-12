@@ -71,6 +71,5 @@ func set_messages_header() -> void:
 	# set the header based on contact name
 	var message_manager = get_tree().get_nodes_in_group("managers")[0]
 	var header = message_manager.message_field_right.get_child(1).get_child(0)
-	if guess_name == "":
-		guess_name = contact_number
 	header.text = "[b]" + guess_name + "[/b]"
+	message_manager.message_dict[contact_number] = guess_name

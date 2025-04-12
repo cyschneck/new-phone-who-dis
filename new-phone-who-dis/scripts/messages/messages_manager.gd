@@ -13,6 +13,7 @@ const POPUP_MESSAGES_NAME = preload("res://scenes/messages/popup_messages_name.t
 @onready var select_contact_popup: Control = %SelectContactPopup
 
 var current_contact
+var message_dict: Dictionary
 
 func _ready() -> void:
 	# setup game on start based on datafiles
@@ -52,6 +53,10 @@ func populate_contacts_message_list() -> void:
 	for contact in messages_data.keys():
 		var new_contact = CONTACT_PREFAB.instantiate()
 		new_contact.name = contact
+		new_contact.guess_name = messages_data[contact]["number"]
+		
+		# track contact number with current guess
+		message_dict[messages_data[contact]["number"]] = new_contact.guess_name
 		
 		# set contact variables
 		var contact_name = new_contact.get_child(1).get_child(0).get_child(0).get_child(0)
@@ -78,14 +83,11 @@ func load_json_data(file_path: String):
 	messages_data = results
 
 func _on_button_pressed() -> void:
-	# display popup
+	# display Popup
 	select_contact_popup.visible = true
 	
 	# populate with remaining contacts
 	var remaining_contacts = select_contact_popup.get_child(0).get_child(0).get_child(0)
-	# start with h seperator
-	var top_h_sep = HSeparator.new()
-	remaining_contacts.add_child(top_h_sep)
 	# add unknown contact
 	var unknown_contact = POPUP_MESSAGES_NAME.instantiate()
 	unknown_contact.text = "[b]Unknown[/b]"
