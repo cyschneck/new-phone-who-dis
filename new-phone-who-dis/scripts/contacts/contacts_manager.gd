@@ -4,7 +4,7 @@ const CONTACT_LIST_JSON = "res://data/contact_list.json"
 var contact_list_data: Dictionary = {} # JSON data for contact
 
 const CONTACT_NAME_PREFAB = preload("res://scenes/contacts/contact_name.tscn")
-const POPUP_VALUE = preload("res://scenes/messages/popup_value.tscn")
+const POPUP_VALUE = preload("res://scenes/contacts/popup_value.tscn")
 
 @onready var contacts_left_list: Control = %ContactsLeftList
 @onready var full_contact_right: Control = %FullContactRight
