@@ -4,7 +4,7 @@ const CONTACT_LIST_JSON = "res://data/contact_list.json"
 var contact_list_data: Dictionary = {} # JSON data for contact
 
 const CONTACT_NAME_PREFAB = preload("res://scenes/contacts/contact_name.tscn")
-const SELECT_NUMBER_ON_POPUP_PREFAB = preload("res://scenes/contacts/select_number_on_popup.tscn")
+const POPUP_VALUE = preload("res://scenes/messages/popup_value.tscn")
 
 @onready var contacts_left_list: Control = %ContactsLeftList
 @onready var full_contact_right: Control = %FullContactRight
@@ -90,7 +90,7 @@ func populate_number_selection() -> void:
 	var top_h_sep = HSeparator.new()
 	popup.add_child(top_h_sep)
 	for number in possible_numbers:
-		var new_number = SELECT_NUMBER_ON_POPUP_PREFAB.instantiate()
+		var new_number = POPUP_VALUE.instantiate()
 		new_number.name = number
 		new_number.text = "[b]" + number + "[/b]"
 		popup.add_child(new_number)

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c5rfdd52g1a61" path="res://scenes/contacts/contact_name.tscn" id="4_q0cfa"]
 [ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="5_0si4w"]
 [ext_resource type="Script" uid="uid://da3kvyqflppek" path="res://scripts/contacts/return_to_messages.gd" id="6_gt0pa"]
-[ext_resource type="PackedScene" uid="uid://dy6mcnphodghq" path="res://scenes/contacts/select_number_on_popup.tscn" id="7_iprsr"]
+[ext_resource type="PackedScene" uid="uid://dy6mcnphodghq" path="res://scenes/contacts/popup_value.tscn" id="7_iprsr"]
 
 [node name="contacts" type="Control"]
 layout_mode = 3
@@ -316,7 +316,6 @@ script = ExtResource("6_gt0pa")
 
 [node name="PhoneSelectPopup" type="Control" parent="BackgroundColor"]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 1
 anchors_preset = 8
@@ -324,27 +323,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -250.0
-offset_top = -250.0
-offset_right = 250.0
-offset_bottom = 250.0
+offset_left = -171.0
+offset_top = -72.0
+offset_right = 329.0
+offset_bottom = 428.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BackgroundColor" type="ColorRect" parent="BackgroundColor/PhoneSelectPopup" groups=["managers"]]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.666
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.217398, 0.223147, 0.160138, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="BackgroundColor/PhoneSelectPopup"]
 layout_mode = 2
 offset_top = 10.0
 offset_right = 500.0
-offset_bottom = 490.0
+offset_bottom = 332.0
 
 [node name="AllRemainingNumbers" type="VBoxContainer" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer"]
 layout_mode = 2
@@ -397,54 +397,6 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="HSeparator8" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers"]
-layout_mode = 2
-
-[node name="SelectNumber9" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers" instance=ExtResource("7_iprsr")]
-layout_mode = 2
-
-[node name="HSeparator9" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers"]
-layout_mode = 2
-
-[node name="SelectNumber10" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers" instance=ExtResource("7_iprsr")]
-layout_mode = 2
-
-[node name="HSeparator10" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers"]
-layout_mode = 2
-
-[node name="SelectNumber11" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers" instance=ExtResource("7_iprsr")]
-layout_mode = 2
-
-[node name="HSeparator11" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers"]
-layout_mode = 2
-
-[node name="SelectNumber12" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers" instance=ExtResource("7_iprsr")]
-layout_mode = 2
-
-[node name="HSeparator12" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers"]
-layout_mode = 2
-
-[node name="SelectNumber13" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers" instance=ExtResource("7_iprsr")]
-layout_mode = 2
-
-[node name="HSeparator13" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers"]
-layout_mode = 2
-
-[node name="SelectNumber14" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers" instance=ExtResource("7_iprsr")]
-layout_mode = 2
-
-[node name="HSeparator14" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers"]
-layout_mode = 2
-
-[node name="SelectNumber15" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers" instance=ExtResource("7_iprsr")]
-layout_mode = 2
-
-[node name="HSeparator15" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers"]
-layout_mode = 2
-
-[node name="SelectNumber16" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers" instance=ExtResource("7_iprsr")]
-layout_mode = 2
-
-[node name="HSeparator16" type="HSeparator" parent="BackgroundColor/PhoneSelectPopup/ScrollContainer/AllRemainingNumbers"]
 layout_mode = 2
 
 [connection signal="pressed" from="BackgroundColor/SettingsButton" to="BackgroundColor/SettingsButton" method="_on_pressed"]

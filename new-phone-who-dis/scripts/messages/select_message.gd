@@ -1,5 +1,12 @@
 extends Control
 
+# set contact name/number
+var contact_name = ""
+var contact_number = ""
+
+# store user's guess
+var guess_name = ""
+
 const CALLER_GREEN_TEXT = preload("res://scenes/messages/caller_green_text.tscn")
 const SENDER_PURPLE_TEXT = preload("res://scenes/messages/sender_purple_text.tscn")
 
