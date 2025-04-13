@@ -78,7 +78,7 @@ func _on_button_pressed() -> void:
 	# when number is selected on header, populate and display popup
 	var remaining_contacts = select_contact_popup.get_child(0).get_child(0).get_child(0)
 
-	# remove placeholder popup values
+	# remove existing popup values
 	for popup_contact in remaining_contacts.get_children():
 		popup_contact.queue_free()
 

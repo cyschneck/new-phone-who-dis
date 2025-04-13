@@ -83,23 +83,40 @@ func return_guess_number(contact_name: String) -> String:
 	return guess_number
 
 func populate_number_selection() -> void:
+	var popup = phone_select_popup.get_child(1).get_child(0)
+	# Clear existing popup values
+	for number in popup.get_children():
+		number.queue_free()
+
 	# collect numbers from contact list to populate popup
 	var possible_numbers = []
 	for contact in GameManager.contact_list_data.keys():
 		possible_numbers.append(GameManager.contact_list_data[contact]["number"])
 	possible_numbers.sort() # sort numbers
 
-	var popup = phone_select_popup.get_child(1).get_child(0)
+	# add default/unknown contact
+	var unknown_contact = POPUP_VALUE.instantiate()
+	unknown_contact.text = "[b]Unknown[/b]"
+	popup.add_child(unknown_contact)
+
+	# add new h seperator after default unknown
+	var unknown_h_sep = HSeparator.new()
+	popup.add_child(unknown_h_sep)
+
 	for number in possible_numbers:
-		var new_number = POPUP_VALUE.instantiate()
-		new_number.name = number
-		new_number.text = "[b]" + number + "[/b]"
-		popup.add_child(new_number)
-		var new_h_sep = HSeparator.new()
-		popup.add_child(new_h_sep)
+		if GameManager.guess_name_with_number_dict[number] == number:
+			# if the guess number is still available, not assigned to a name
+			var new_number = POPUP_VALUE.instantiate()
+			new_number.name = number
+			new_number.text = "[b]" + number + "[/b]"
+			popup.add_child(new_number)
+	
+			var new_h_sep = HSeparator.new()
+			popup.add_child(new_h_sep)
 
 func _on_select_number_pressed() -> void:
 	# display popup
+	populate_number_selection()
 	phone_select_popup.visible = true
 
 func _on_close_popup_pressed() -> void:

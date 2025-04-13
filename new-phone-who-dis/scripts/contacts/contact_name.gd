@@ -9,9 +9,12 @@ var number: String
 # When Contact on Left is Selected
 func _on_button_pressed() -> void:
 	var contacts_manager = get_tree().get_nodes_in_group("managers")[0]
-	var contact_header = contacts_manager.full_contact_right.get_child(1).get_child(1)
+
+	# if popup still open, close
+	contacts_manager.phone_select_popup.visible = false
 	
 	# Setting up contact name in main panel
+	var contact_header = contacts_manager.full_contact_right.get_child(1).get_child(1)
 	contact_header.get_child(1).text = "[b]" + self.name + "[/b]"
 
 	# Setup contact number selected or default
