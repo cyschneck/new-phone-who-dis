@@ -92,8 +92,8 @@ func _on_button_pressed() -> void:
 	remaining_contacts.add_child(unknown_h_sep)
 
 	# iteratively add contacts to popup
-
-	for full_name in GameManager.correct_name_with_number.keys():
+	for contact in GameManager.sorted_contacts:
+		var full_name = GameManager.contact_ordering[contact]
 		if full_name not in GameManager.guess_name_with_number_dict.values():
 			# if the current guess for a number is unknown, add to popup
 			var new_contact = POPUP_MESSAGES_NAME.instantiate()

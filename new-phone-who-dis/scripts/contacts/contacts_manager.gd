@@ -27,13 +27,12 @@ func populate_contacts_list() -> void:
 	var contact_list = contacts_left_list.get_child(1).get_child(0)
 	var new_h_sep = HSeparator.new() # start contact list with a seperator
 	contact_list.add_child(new_h_sep)
-	
-	var sorted_contacts = GameManager.contact_list_data.keys()
-	sorted_contacts.sort() # sort list of strings
 
-	for contact in sorted_contacts:
+	# Display contacts in order
+	for contact in GameManager.sorted_contacts:
 		var new_contact_name = CONTACT_NAME_PREFAB.instantiate()
-		var contact_data = GameManager.contact_list_data[contact]
+		var contact_full_name = GameManager.contact_ordering[contact]
+		var contact_data = GameManager.contact_list_data[GameManager.contact_id_dict[contact_full_name]]
 		
 		# setup contacts key
 		var dict_key = contact_data["first_name"]
@@ -59,7 +58,7 @@ func populate_contacts_list() -> void:
 		var add_h_sep = HSeparator.new()
 		contact_list.add_child(add_h_sep)
 		
-		if contact == sorted_contacts[0]:
+		if contact == GameManager.sorted_contacts[0]:
 			# setup default contact based on first in list
 			set_default_starter(new_contact_name)
 
