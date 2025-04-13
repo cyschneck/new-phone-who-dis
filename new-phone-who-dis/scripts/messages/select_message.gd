@@ -11,23 +11,23 @@ const CALLER_GREEN_TEXT = preload("res://scenes/messages/caller_green_text.tscn"
 const SENDER_PURPLE_TEXT = preload("res://scenes/messages/sender_purple_text.tscn")
 
 func _on_button_pressed() -> void:
+	# select a contact on the left field
 	var message_manager = get_tree().get_nodes_in_group("managers")[0]
+	
+	# set current message field to current
 	message_manager.current_contact = self
 	populate_message_right_field(self.name)
 	
 	# if popup is visible, close popup
 	message_manager.select_contact_popup.visible = false
 
-func reset_guess() -> void:
-	# reset guess to number
-	guess_name = contact_number
-
 func populate_message_right_field(contact: String) -> void:
 	# set header
 	set_messages_header()
+
 	# populate the message field when a contact message is selected
 	var message_manager = get_tree().get_nodes_in_group("managers")[0]
-	var contact_messages = message_manager.messages_data[contact]["messages"]
+	var contact_messages = GameManager.messages_data[contact]["messages"]
 	var text_messages_field = message_manager.text_messages
 	
 	# remove existing text messages
@@ -46,6 +46,17 @@ func populate_message_right_field(contact: String) -> void:
 			var new_caller_text = CALLER_GREEN_TEXT.instantiate()
 			new_caller_text.text = new_split_text_message
 			text_messages_field.add_child(new_caller_text)
+
+func set_messages_header() -> void:
+	# set the header based on contact name
+	var message_manager = get_tree().get_nodes_in_group("managers")[0]
+	# set main header
+	var header = message_manager.message_field_right.get_child(1).get_child(0)
+	header.text = "[b]" + guess_name + "[/b]"
+	GameManager.set_guess_dictionary(contact_number, guess_name)
+	# set contact field on left
+	var contact_field = self.get_child(1).get_child(0).get_child(0).get_child(0)
+	contact_field.text = "[b]" + guess_name + "[/b]"
 
 func split_message(full_message: String) -> String:
 	# split text after XX characters, but without splitting up a word
@@ -67,9 +78,6 @@ func split_message(full_message: String) -> String:
 		current_index += 1
 	return new_split_text
 
-func set_messages_header() -> void:
-	# set the header based on contact name
-	var message_manager = get_tree().get_nodes_in_group("managers")[0]
-	var header = message_manager.message_field_right.get_child(1).get_child(0)
-	header.text = "[b]" + guess_name + "[/b]"
-	message_manager.message_dict[contact_number] = guess_name
+func reset_guess() -> void:
+	# reset guess to number
+	guess_name = contact_number

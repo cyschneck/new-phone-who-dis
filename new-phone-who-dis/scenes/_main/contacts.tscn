@@ -23,6 +23,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ContactsManager" type="Control" parent="." groups=["managers"]]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_wdjsl")
+
 [node name="BackgroundColor" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -31,12 +37,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.027451, 0.027451, 0.027451, 1)
-
-[node name="ContactsManager" type="Control" parent="BackgroundColor" groups=["managers"]]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_wdjsl")
 
 [node name="SearchBar" type="LineEdit" parent="BackgroundColor"]
 top_level = true
@@ -420,6 +420,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_wdjsl")
 text = "X"
 
 [connection signal="pressed" from="BackgroundColor/SettingsButton" to="BackgroundColor/SettingsButton" method="_on_pressed"]
-[connection signal="pressed" from="BackgroundColor/FullContactRight/TopFrame/HeaderContact/Phone Number/SelectNumber" to="BackgroundColor/ContactsManager" method="_on_select_number_pressed"]
+[connection signal="pressed" from="BackgroundColor/FullContactRight/TopFrame/HeaderContact/Phone Number/SelectNumber" to="ContactsManager" method="_on_select_number_pressed"]
 [connection signal="pressed" from="BackgroundColor/FullContactRight/ReturnToMessages" to="BackgroundColor/FullContactRight/ReturnToMessages" method="_on_pressed"]
-[connection signal="pressed" from="BackgroundColor/PhoneSelectPopup/ClosePopup" to="BackgroundColor/ContactsManager" method="_on_close_popup_pressed"]
+[connection signal="pressed" from="BackgroundColor/PhoneSelectPopup/ClosePopup" to="ContactsManager" method="_on_close_popup_pressed"]

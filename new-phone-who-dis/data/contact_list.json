@@ -17,14 +17,14 @@
 		"first_name": "Grant",
 		"last_name": "Monument",
 		"icon": "icon_path",
-		"description": "This is a description, GM",
+		"description": "This is a description, GM, roommate",
 		"number": "303-333-333",
 	},
 	"Nutty": {
 		"first_name": "Dough",
 		"last_name": "Nutty",
 		"icon": "icon_path",
-		"description": "This is a description, DN",
+		"description": "This is a description, DN, job",
 		"number": "303-444-4444",
 	},
 	"Naval Observatory Standard Time": {
@@ -45,7 +45,7 @@
 		"first_name": "Eddie",
 		"last_name": "",
 		"icon": "icon_path",
-		"description": "This is a description, Ed",
+		"description": "Ignore his lies",
 		"number": "303-777-777",
 	},
 	"Atwater": {
@@ -108,7 +108,7 @@
 		"first_name": "Giles",
 		"last_name": "Deacon",
 		"icon": "icon_path",
-		"description": "This is a description, GD",
+		"description": "This is a description, GD, stepdad",
 		"number": "333-222-1112",
 	},
 	"Mom": {
@@ -122,7 +122,7 @@
 		"first_name": "Dad",
 		"last_name": "",
 		"icon": "icon_path",
-		"description": "Teddy",
+		"description": "Dad",
 		"number": "720-555-0220",
 	},
 	"Oma": {
