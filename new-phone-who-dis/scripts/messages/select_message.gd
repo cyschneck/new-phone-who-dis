@@ -1,11 +1,7 @@
 extends Control
 
-# set contact name/number
-var contact_name = ""
+# save contact number
 var contact_number = ""
-
-# store user's guess
-var guess_name = contact_number
 
 const CALLER_GREEN_TEXT = preload("res://scenes/messages/caller_green_text.tscn")
 const SENDER_PURPLE_TEXT = preload("res://scenes/messages/sender_purple_text.tscn")
@@ -50,13 +46,16 @@ func populate_message_right_field(contact: String) -> void:
 func set_messages_header() -> void:
 	# set the header based on contact name
 	var message_manager = get_tree().get_nodes_in_group("managers")[0]
+	var current_guess = GameManager.guess_name_with_number_dict[contact_number]
+	current_guess = "[b]" + current_guess + "[/b]"
+
 	# set main header
 	var header = message_manager.message_field_right.get_child(1).get_child(0)
-	header.text = "[b]" + guess_name + "[/b]"
-	GameManager.set_guess_dictionary(contact_number, guess_name)
+	header.text = current_guess
+
 	# set contact field on left
 	var contact_field = self.get_child(1).get_child(0).get_child(0).get_child(0)
-	contact_field.text = "[b]" + guess_name + "[/b]"
+	contact_field.text = current_guess
 
 func split_message(full_message: String) -> String:
 	# split text after XX characters, but without splitting up a word
@@ -77,7 +76,3 @@ func split_message(full_message: String) -> String:
 		full_length += 1
 		current_index += 1
 	return new_split_text
-
-func reset_guess() -> void:
-	# reset guess to number
-	guess_name = contact_number

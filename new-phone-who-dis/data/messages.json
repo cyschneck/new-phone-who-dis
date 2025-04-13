@@ -1,7 +1,6 @@
 {
-  "contact 1": {
+  "message 1": {
 	"contact_name": "Atheylna Dinn <3",
-	"number": "303-123-4567",
 	"messages": {
 	  "caller1": "you owe me a new phone, idiot",
 	  "sender1": "new phone, who dis?",
@@ -9,88 +8,78 @@
 	  "sender3": "everything should be unlocked tho"
 	}
   },
-  "contact 2": {
+  "message 2": {
 	"contact_name": "Mom",
-	"number": "303-891-0123",
 	"messages": {
 	  "sender1": "this is the second message2-2",
 	  "sender2": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
 	  "caller2": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
 	}
   },
-  "contact 3": {
+  "message 3": {
 	"contact_name": "Giles Deacon",
-	"number": "303-333-333",
 	"messages": {
 	  "sender1": "Call your mother",
 	  "caller1": "It went to voicemail",
 	  "sender2": "Call your mother"
 	}
   },
-  "contact 4": {
+  "message 4": {
 	"contact_name": "Tim and Mary Fisher",
-	"number": "303-444-4444",
 	"messages": {
 	  "sender1": "contact 4",
 	  "sender2": "please make them effective by the first of march if you can...",
 	  "caller1": "this is the third message3-2"
 	}
   },
-  "contact 5": {
+  "message 5": {
 	"contact_name": "Boyd",
-	"number": "303-555-5555",
 	"messages": {
 	  "sender1": "Miss you",
 	  "sender2": "Miss you",
 	}
   },
-  "contact 6": {
+  "message 6": {
 	"contact_name": "Issac Honeylick",
-	"number": "303-666-666",
 	"messages": {
 	  "sender1": "contact six",
 	  "caller1": "this is the second message2-2",
 	}
   },
-  "contact 7": {
+  "message 7": {
 	"contact_name": "Echo Wintermute",
-	"number": "303-777-7777",
 	"messages": {
 	  "caller1": "contact seven",
 	  "caller2": "this is the second message2-2",
 	  "caller3": "this is the third message3-2"
 	}
   },
-  "contact 8": {
+  "message 8": {
 	"contact_name": "Grant Monument",
-	"number": "303-888-8888",
 	"messages": {
 	  "sender1":"contact eight",
 	  "caller1": "this is the second message2-2",
 	  "sender2": "this is the third message3-2"
 	}
   },
-  "contact 9": {
+  "message 9": {
 	"contact_name": "Dough Nutty",
-	"number": "303-999-9999",
 	"messages": {
 	  "sender1": "contact nine",
 	  "sender2": "this is the second message2-2",
 	  "caller1": "this is the third message3-2"
 	}
   },
-  "contact 10": {
+  "message 10": {
 	"contact_name": "Eddie",
-	"number": "303-101-0101",
 	"messages": {
 	  "caller1": "contact ten",
 	  "sender1": "this is the second message2-2",
 	  "caller2": "this is the third message3-2"
 	}
   },
-  "contact 10": {
+  "message 10": {
 	"contact_name": "Sigrith Loudermilk",
-	"number": "303-101-0101",
 	"messages": {
 	  "sender1": "Hi, this is your brother's roommate, he gave me your number",
 	  "sender2": "Merry Christmas!",

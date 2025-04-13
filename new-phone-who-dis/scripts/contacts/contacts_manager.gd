@@ -7,8 +7,6 @@ const POPUP_VALUE = preload("res://scenes/contacts/popup_value.tscn")
 @onready var full_contact_right: Control = %FullContactRight
 @onready var phone_select_popup: Control = %PhoneSelectPopup
 
-var contacts_dict: Dictionary
-
 func _ready() -> void:
 	## Clear placeholder contacts
 	var contacts = contacts_left_list.get_child(1).get_child(0)
@@ -41,7 +39,6 @@ func populate_contacts_list() -> void:
 		var dict_key = contact_data["first_name"]
 		if contact_data["last_name"] != "":
 			dict_key += " " + contact_data["last_name"]
-		contacts_dict[dict_key] = ""
 		new_contact_name.name = dict_key
 
 		# setup bolded text on contacts
@@ -56,26 +53,34 @@ func populate_contacts_list() -> void:
 		new_contact_name.last_name = contact_data["last_name"]
 		new_contact_name.icon_path = contact_data["icon"]
 		new_contact_name.description = contact_data["description"]
+		new_contact_name.number = contact_data["number"]
 		
 		contact_list.add_child(new_contact_name)
 		var add_h_sep = HSeparator.new()
 		contact_list.add_child(add_h_sep)
+		
+		if contact == sorted_contacts[0]:
+			# setup default contact based on first in list
+			set_default_starter(new_contact_name)
 
-	# setup default contact based on first in list
-	set_default_starter(sorted_contacts[0])
-
-func set_default_starter(first_contact: String) -> void:
+func set_default_starter(first_contact: Node) -> void:
 	# set up the default contact being displayed on start
-	var contact_header = full_contact_right.get_child(1).get_child(1).get_child(1)
-	var full_name =  GameManager.contact_list_data[first_contact]["first_name"]
-	if GameManager.contact_list_data[first_contact]["first_name"] != "":
-		full_name += " " + GameManager.contact_list_data[first_contact]["last_name"]
-	full_name = "[b]" + full_name + "[/b]"
-	contact_header.text = full_name
+	var contact_header = full_contact_right.get_child(1).get_child(1)
+	contact_header.get_child(1).text = "[b]" + first_contact.name + "[/b]"
 	
 	var description_notes = full_contact_right.get_child(2).get_child(0).get_child(0)
-	description_notes.get_child(0).get_child(1).text = GameManager.contact_list_data[first_contact]["description"]
+	description_notes.get_child(0).get_child(1).text = first_contact.description
+	
+	var guess_num = return_guess_number(first_contact.name)
+	contact_header.get_child(2).text = "[b]" + guess_num + "[/b]"
 
+func return_guess_number(contact_name: String) -> String:
+	var guess_number = "XXX-XXX-XXXX" # default
+	# set contact number based on guess
+	for contact_number in GameManager.guess_name_with_number_dict.keys():
+		if GameManager.guess_name_with_number_dict[contact_number] == contact_name:
+			guess_number = contact_number
+	return guess_number
 
 func populate_number_selection() -> void:
 	# collect numbers from contact list to populate popup
