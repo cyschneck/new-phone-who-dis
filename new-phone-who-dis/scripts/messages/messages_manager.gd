@@ -73,10 +73,14 @@ func populate_contacts_message_list() -> void:
 		var new_h_sep = HSeparator.new()
 		contacts_list.add_child(new_h_sep)
 
-## POPUP
+## When Header Button is Pressed, open Number Popup
 func _on_button_pressed() -> void:
 	# when number is selected on header, populate and display popup
 	var remaining_contacts = select_contact_popup.get_child(0).get_child(0).get_child(0)
+
+	# remove placeholder popup values
+	for popup_contact in remaining_contacts.get_children():
+		popup_contact.queue_free()
 
 	# add default/unknown contact
 	var unknown_contact = POPUP_MESSAGES_NAME.instantiate()
@@ -88,11 +92,9 @@ func _on_button_pressed() -> void:
 	remaining_contacts.add_child(unknown_h_sep)
 
 	# iteratively add contacts to popup
-	# Full Name = XXX-XXX-XXXX
-	#var correct_name_with_numbe
+
 	for full_name in GameManager.correct_name_with_number.keys():
-		var contact_num = GameManager.correct_name_with_number[full_name]
-		if GameManager.guess_name_with_number_dict[contact_num] == contact_num:
+		if full_name not in GameManager.guess_name_with_number_dict.values():
 			# if the current guess for a number is unknown, add to popup
 			var new_contact = POPUP_MESSAGES_NAME.instantiate()
 			new_contact.text = "[b]" + full_name + "[/b]"
