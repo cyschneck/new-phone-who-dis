@@ -27,13 +27,11 @@ func _ready() -> void:
 		var full_name =  contact_list_data[contact_key]["first_name"]
 		if contact_list_data[contact_key]["last_name"] != "":
 			full_name += " " + contact_list_data[contact_key]["last_name"]
+		# Full Name = XXX-XXX-XXXX
 		correct_name_with_number[full_name] = contact_list_data[contact_key]["number"]
-	
-	# Set starting guess for all contacts to contact_number
-	for message_key in messages_data.keys():
-		var act_contact_name = messages_data[message_key]["contact_name"]
-		var contact_number = correct_name_with_number[act_contact_name]
-		guess_name_with_number_dict[contact_number] = contact_number
+		# Set starting guess for all contacts to contact_number
+		# XXX-XXX-XXXX = Guess Full Name
+		guess_name_with_number_dict[contact_list_data[contact_key]["number"]] = contact_list_data[contact_key]["number"]
 
 ## JSON DATA
 func load_json_data(file_path: String):

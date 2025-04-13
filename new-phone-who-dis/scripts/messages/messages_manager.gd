@@ -88,14 +88,18 @@ func _on_button_pressed() -> void:
 	remaining_contacts.add_child(unknown_h_sep)
 
 	# iteratively add contacts to popup
-	for contact_key in GameManager.messages_data.keys():
-		var new_contact = POPUP_MESSAGES_NAME.instantiate()
-		var popup_text = GameManager.messages_data[contact_key]["contact_name"]
-		new_contact.text = "[b]" + popup_text + "[/b]"
-	
-		remaining_contacts.add_child(new_contact)
-		var new_hsep = HSeparator.new()
-		remaining_contacts.add_child(new_hsep)
+	# Full Name = XXX-XXX-XXXX
+	#var correct_name_with_numbe
+	for full_name in GameManager.correct_name_with_number.keys():
+		var contact_num = GameManager.correct_name_with_number[full_name]
+		if GameManager.guess_name_with_number_dict[contact_num] == contact_num:
+			# if the current guess for a number is unknown, add to popup
+			var new_contact = POPUP_MESSAGES_NAME.instantiate()
+			new_contact.text = "[b]" + full_name + "[/b]"
+		
+			remaining_contacts.add_child(new_contact)
+			var new_hsep = HSeparator.new()
+			remaining_contacts.add_child(new_hsep)
 
 	# display popup
 	select_contact_popup.visible = true
