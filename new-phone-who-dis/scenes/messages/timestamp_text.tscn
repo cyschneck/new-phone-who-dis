@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dyfduqub1pf0c"]
+
+[node name="Timestamp" type="Label"]
+theme_override_colors/font_color = Color(1, 1, 1, 0.498039)
+text = "Today 10:35"
+horizontal_alignment = 1
+vertical_alignment = 1

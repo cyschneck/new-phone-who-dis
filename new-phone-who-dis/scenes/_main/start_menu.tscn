@@ -85,14 +85,14 @@ layout_mode = 2
 theme_override_constants/separation = 35
 metadata/_edit_use_anchors_ = true
 
-[node name="Time" type="Label" parent="BackgroundImage/MarginContainer/Menu/Texts"]
+[node name="Title" type="Label" parent="BackgroundImage/MarginContainer/Menu/Texts"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "new phone, who dis?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="BackgroundImage/MarginContainer/Menu/Texts/Time"]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundImage/MarginContainer/Menu/Texts/Title"]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = 15
@@ -105,14 +105,14 @@ theme_override_constants/margin_top = -10
 theme_override_constants/margin_right = -10
 theme_override_constants/margin_bottom = -10
 
-[node name="ColorRect" type="ColorRect" parent="BackgroundImage/MarginContainer/Menu/Texts/Time/MarginContainer"]
+[node name="ColorRect" type="ColorRect" parent="BackgroundImage/MarginContainer/Menu/Texts/Title/MarginContainer"]
 show_behind_parent = true
 layout_mode = 2
 color = Color(0.372549, 0.392157, 1, 1)
 
 [node name="Text" type="Label" parent="BackgroundImage/MarginContainer/Menu/Texts"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 24
 text = "just kidding, but 
 I don't think your contacts 
 transfered over, my bad"
@@ -139,7 +139,7 @@ color = Color(0.372549, 0.392157, 1, 1)
 
 [node name="Text2" type="Label" parent="BackgroundImage/MarginContainer/Menu/Texts"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 24
 text = "everything should be
 unlocked tho"
 horizontal_alignment = 1

@@ -5,6 +5,7 @@ var contact_number = ""
 
 const CALLER_GREEN_TEXT = preload("res://scenes/messages/caller_green_text.tscn")
 const SENDER_PURPLE_TEXT = preload("res://scenes/messages/sender_purple_text.tscn")
+const TIMESTAMP_TEXT = preload("res://scenes/messages/timestamp_text.tscn")
 
 func _on_button_pressed() -> void:
 	# select a contact on the left field
@@ -29,6 +30,10 @@ func populate_message_right_field(contact: String) -> void:
 	# remove existing text messages
 	for existing_text_messages in text_messages_field.get_children():
 		existing_text_messages.queue_free()
+
+	var new_timestamp = TIMESTAMP_TEXT.instantiate()
+	new_timestamp.text = "Today 10:49"
+	text_messages_field.add_child(new_timestamp)
 
 	for message_origin in contact_messages.keys():
 		var new_split_text_message = split_message(contact_messages[message_origin])
