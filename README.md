@@ -1,2 +1,2 @@
 # new-phone-who-dis
-Godot Game Jam
+Godot Mystery Game Jam: "Last Message"
