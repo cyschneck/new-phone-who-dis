@@ -33,7 +33,9 @@ func populate_message_right_field(contact: String) -> void:
 
 	for datetime in contact_messages.keys():
 		var new_timestamp = TIMESTAMP_TEXT.instantiate()
-		new_timestamp.text = datetime
+		# add seperating datetime string
+		var date_time = determine_datetime(datetime)
+		new_timestamp.text = date_time
 		text_messages_field.add_child(new_timestamp)
 		for message_origin in contact_messages[datetime]:
 			var message_text = contact_messages[datetime][message_origin]
@@ -48,6 +50,44 @@ func populate_message_right_field(contact: String) -> void:
 				var new_caller_text = CALLER_GREEN_TEXT.instantiate()
 				new_caller_text.text = new_split_text_message
 				text_messages_field.add_child(new_caller_text)
+
+func determine_datetime(datetime: String) -> String:
+	# determine datetime string to use in text messages
+	# starting string: MM/DD/YYYY DOY HH:MM AM
+	# Today/Yesterday: Today HH:MM
+	# Within last weeek: DOY HH:MM
+	# Within last year: Sun, Apr 6 at HH:MM
+	var datetime_string = ""
+	var date_time = datetime.split(" ")
+	if date_time[0] == "5/5/2025":
+		datetime_string = "Today " + date_time[2] + " " + date_time[3]
+	elif date_time[0] == "5/4/2025":
+		datetime_string = "Yesterday " + date_time[2] + " " + date_time[3]
+	elif date_time[0] in ["5/3/2025", "5/2/2025", "5/1/2025",
+						"4/30/2025", "4/29/2025", "4/28/2025"]:
+		datetime_string = date_time[1] + " " + date_time[2] + " " + date_time[3]
+	else:
+		var month = ""
+		var dates = date_time[0].split("/")
+		if dates[0] == "1": month = "Jan"
+		if dates[0] == "2": month = "Feb"
+		if dates[0] == "3": month = "Mar"
+		if dates[0] == "4": month = "Apr"
+		if dates[0] == "5": month = "May"
+		if dates[0] == "6": month = "Jun"
+		if dates[0] == "7": month = "Jul"
+		if dates[0] == "8": month = "Aug"
+		if dates[0] == "9": month = "Sept"
+		if dates[0] == "10": month = "Oct"
+		if dates[0] == "11": month = "Nov"
+		if dates[0] == "12": month = "Dec"
+		if dates[-1] == "2025":
+			datetime_string = date_time[1] + ", " + month + " " + dates[1] + " at " + date_time[2] + " " + date_time[3]
+		else:
+			datetime_string = date_time[1] + ", " + month + " " + dates[1] + " " + dates[-1] + " at " + date_time[2] + " " + date_time[3]
+			
+	
+	return datetime_string
 
 func set_messages_header() -> void:
 	# set the header based on contact name

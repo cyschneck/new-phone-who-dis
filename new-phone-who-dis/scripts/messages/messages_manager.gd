@@ -49,6 +49,13 @@ func populate_contacts_message_list() -> void:
 	var top_h_sep = HSeparator.new()
 	contacts_list.add_child(top_h_sep)
 	
+	# organize messages by last received message
+	var latest_dates = []
+	for contact in GameManager.messages_data.keys():
+		var message_dates = GameManager.messages_data[contact]["messages"].keys()
+		var last_message = message_dates[-1].split(" ")[0]
+		latest_dates.append(last_message)
+
 	# populate contacts on the left field
 	for contact in GameManager.messages_data.keys():
 		var new_contact = CONTACT_PREFAB.instantiate()
