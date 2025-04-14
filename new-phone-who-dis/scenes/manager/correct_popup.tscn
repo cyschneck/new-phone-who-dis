@@ -1,45 +1,59 @@
-[gd_scene load_steps=3 format=3 uid="uid://brrq7l7yd1vy"]
+[gd_scene load_steps=5 format=3 uid="uid://brrq7l7yd1vy"]
 
 [ext_resource type="Script" uid="uid://cckvljikq27y" path="res://scripts/managers/correct_popup.gd" id="1_we1my"]
 [ext_resource type="PackedScene" uid="uid://bagtumglcy8a2" path="res://scenes/manager/correct_guess.tscn" id="2_r26vb"]
 
-[node name="CorrectPopup" type="ColorRect"]
-top_level = true
-z_index = 1
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r26vb"]
+bg_color = Color(0.423566, 0.367161, 0.876761, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ts6l2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="CorrectPopup" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_we1my")
+
+[node name="BlockInput" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.47451)
+
+[node name="Container" type="Control" parent="."]
+custom_minimum_size = Vector2(700, 385)
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -351.5
-offset_top = -192.0
-offset_right = 351.5
-offset_bottom = 192.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.270705, 0.201221, 0.634964, 1)
-script = ExtResource("1_we1my")
-
-[node name="ClosePopup" type="Button" parent="."]
-custom_minimum_size = Vector2(200, 70)
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -100.0
-offset_top = -90.0
-offset_right = 100.0
-offset_bottom = -20.0
-grow_horizontal = 2
-grow_vertical = 0
 size_flags_horizontal = 4
-size_flags_vertical = 8
-theme_override_font_sizes/font_size = 25
-text = "Got it"
+size_flags_vertical = 4
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="PopupColor" type="ColorRect" parent="Container"]
+show_behind_parent = true
+layout_mode = 2
+offset_right = 700.0
+offset_bottom = 385.0
+color = Color(0.270588, 0.2, 0.635294, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Container"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,26 +65,42 @@ theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="CorrectAnswers" type="VBoxContainer" parent="MarginContainer"]
+[node name="CorrectAnswers" type="VBoxContainer" parent="Container/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Contact" parent="MarginContainer/CorrectAnswers" instance=ExtResource("2_r26vb")]
+[node name="Contact" parent="Container/MarginContainer/CorrectAnswers" instance=ExtResource("2_r26vb")]
 layout_mode = 2
 
-[node name="HSeparator2" type="HSeparator" parent="MarginContainer/CorrectAnswers"]
+[node name="HSeparator2" type="HSeparator" parent="Container/MarginContainer/CorrectAnswers"]
 layout_mode = 2
 
-[node name="Contact2" parent="MarginContainer/CorrectAnswers" instance=ExtResource("2_r26vb")]
+[node name="Contact2" parent="Container/MarginContainer/CorrectAnswers" instance=ExtResource("2_r26vb")]
 layout_mode = 2
 
-[node name="HSeparator3" type="HSeparator" parent="MarginContainer/CorrectAnswers"]
+[node name="HSeparator3" type="HSeparator" parent="Container/MarginContainer/CorrectAnswers"]
 layout_mode = 2
 
-[node name="Contact3" parent="MarginContainer/CorrectAnswers" instance=ExtResource("2_r26vb")]
+[node name="Contact3" parent="Container/MarginContainer/CorrectAnswers" instance=ExtResource("2_r26vb")]
 layout_mode = 2
 
-[node name="HSeparator4" type="HSeparator" parent="MarginContainer/CorrectAnswers"]
+[node name="HSeparator4" type="HSeparator" parent="Container/MarginContainer/CorrectAnswers"]
 layout_mode = 2
 
-[connection signal="pressed" from="ClosePopup" to="." method="_on_close_popup_pressed"]
+[node name="Contact4" parent="Container/MarginContainer/CorrectAnswers" instance=ExtResource("2_r26vb")]
+layout_mode = 2
+
+[node name="HSeparator5" type="HSeparator" parent="Container/MarginContainer/CorrectAnswers"]
+layout_mode = 2
+
+[node name="ClosePopup" type="Button" parent="Container/MarginContainer"]
+custom_minimum_size = Vector2(200, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 25
+theme_override_styles/hover = SubResource("StyleBoxFlat_r26vb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ts6l2")
+text = "Got it"
+
+[connection signal="pressed" from="Container/MarginContainer/ClosePopup" to="." method="_on_close_popup_pressed"]

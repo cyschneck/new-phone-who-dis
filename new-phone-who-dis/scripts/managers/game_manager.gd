@@ -82,7 +82,7 @@ func check_for_correct() -> void:
 	if correct_guesses == 3:
 		# remove existing children
 		var correct_popup = CORRECT_POPUP.instantiate()
-		var correct_answers_box = correct_popup.get_child(1).get_child(0)
+		var correct_answers_box = correct_popup.get_child(1).get_child(1).get_child(0)
 		for child in correct_answers_box.get_children():
 			child.queue_free()
 
@@ -103,6 +103,7 @@ func check_for_correct() -> void:
 			correct_answers_box.add_child(new_hsep)
 
 		self.add_child(correct_popup)
+		get_tree().paused = true
 
 
 func order_contacts() -> void:
