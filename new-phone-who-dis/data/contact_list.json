@@ -146,11 +146,4 @@
 		"description": "Brother",
 		"number": "303-555-0102",
 	},
-	"contact 22": {
-		"first_name": "Campus Security",
-		"last_name": "",
-		"icon": "icon_path",
-		"description": "Campus Security (old number)",
-		"number": "302-555-1117",
-	},
 }

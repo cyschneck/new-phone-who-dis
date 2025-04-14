@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://do3e4ldyqejfj" path="res://scripts/messages/messages_manager.gd" id="1_dppxf"]
 [ext_resource type="Script" uid="uid://u181dkwfqb85" path="res://scripts/messages/search_bar.gd" id="2_jy8bd"]
 [ext_resource type="Texture2D" uid="uid://b4hrwgkmvlmdj" path="res://images/icons8-settings-50-0CCE6B.png" id="3_bdw3y"]
-[ext_resource type="Script" uid="uid://f4530de140nn" path="res://scripts/settings.gd" id="4_d67uv"]
+[ext_resource type="Script" uid="uid://f4530de140nn" path="res://scripts/managers/settings.gd" id="4_d67uv"]
 [ext_resource type="PackedScene" uid="uid://cmb6w2h80yo6f" path="res://scenes/messages/contact_with_last_message.tscn" id="5_dvosh"]
 [ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="6_l0wf5"]
 [ext_resource type="Script" uid="uid://c0fwdldoayhqb" path="res://scripts/messages/return_to_contacts.gd" id="7_wevnu"]

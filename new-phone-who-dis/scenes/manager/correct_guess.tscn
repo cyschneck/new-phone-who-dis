@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bagtumglcy8a2"]
+
+[node name="Contact" type="RichTextLabel"]
+custom_minimum_size = Vector2(0, 42)
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]Full Contact Name -> XXX-XXX-XXX[/b]"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

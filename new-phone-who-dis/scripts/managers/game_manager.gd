@@ -12,6 +12,9 @@ var contact_list_data: Dictionary = {} # JSON data for contact
 # Store Correct Contact Name and Number
 # Full Name = XXX-XXX-XXXX
 var correct_name_with_number: Dictionary = {}
+var correct_and_sync: Array = []
+const CORRECT_POPUP = preload("res://scenes/manager/correct_popup.tscn")
+const CORRECT_GUESS = preload("res://scenes/manager/correct_guess.tscn")
 
 # Store the Contact Number and Associated Guess
 # XXX-XXX-XXXX = Guess Full Name
@@ -62,6 +65,45 @@ func set_guess_dictionary(contact_number: String, guess: String) -> void:
 	if guess == "":
 		guess = contact_number
 	guess_name_with_number_dict[contact_number] = guess
+	check_for_correct()
+
+# check if three contacts are correct
+func check_for_correct() -> void:
+	var correct_guesses = 0
+	var all_correct = []
+	for contact_num in guess_name_with_number_dict.keys():
+		if guess_name_with_number_dict[contact_num] != contact_num:
+			var guess_full_name = guess_name_with_number_dict[contact_num]
+			if correct_name_with_number[guess_full_name] == contact_num:
+				if contact_num not in all_correct:
+					correct_guesses += 1
+					all_correct.append(guess_full_name)
+
+	if correct_guesses == 3:
+		# remove existing children
+		var correct_popup = CORRECT_POPUP.instantiate()
+		var correct_answers_box = correct_popup.get_child(1).get_child(0)
+		for child in correct_answers_box.get_children():
+			child.queue_free()
+
+		# add header
+		var syncing = CORRECT_GUESS.instantiate()
+		syncing.text = "[b]" + "CONTACTS SYNCED" + "[/b]"
+		correct_answers_box.add_child(syncing)
+		var head_hsep = HSeparator.new()
+		correct_answers_box.add_child(head_hsep)
+
+		# add correct guesses
+		for correct_guess in all_correct:
+			correct_and_sync.append(correct_guess)
+			var correct_answer = CORRECT_GUESS.instantiate()
+			correct_answer.text = "[b]" + correct_guess + " -> " + correct_name_with_number[correct_guess] + "[/b]"
+			correct_answers_box.add_child(correct_answer)
+			var new_hsep = HSeparator.new()
+			correct_answers_box.add_child(new_hsep)
+
+		self.add_child(correct_popup)
+
 
 func order_contacts() -> void:
 	# collect all last names (or first names if no last available)

@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://brrq7l7yd1vy"]
+
+[ext_resource type="Script" uid="uid://cckvljikq27y" path="res://scripts/managers/correct_popup.gd" id="1_we1my"]
+[ext_resource type="PackedScene" uid="uid://bagtumglcy8a2" path="res://scenes/manager/correct_guess.tscn" id="2_r26vb"]
+
+[node name="CorrectPopup" type="ColorRect"]
+top_level = true
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.5
+offset_top = -192.0
+offset_right = 351.5
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.270705, 0.201221, 0.634964, 1)
+script = ExtResource("1_we1my")
+
+[node name="ClosePopup" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 70)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -90.0
+offset_right = 100.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 25
+text = "Got it"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CorrectAnswers" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Contact" parent="MarginContainer/CorrectAnswers" instance=ExtResource("2_r26vb")]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/CorrectAnswers"]
+layout_mode = 2
+
+[node name="Contact2" parent="MarginContainer/CorrectAnswers" instance=ExtResource("2_r26vb")]
+layout_mode = 2
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/CorrectAnswers"]
+layout_mode = 2
+
+[node name="Contact3" parent="MarginContainer/CorrectAnswers" instance=ExtResource("2_r26vb")]
+layout_mode = 2
+
+[node name="HSeparator4" type="HSeparator" parent="MarginContainer/CorrectAnswers"]
+layout_mode = 2
+
+[connection signal="pressed" from="ClosePopup" to="." method="_on_close_popup_pressed"]
