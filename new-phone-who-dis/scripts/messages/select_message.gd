@@ -31,22 +31,23 @@ func populate_message_right_field(contact: String) -> void:
 	for existing_text_messages in text_messages_field.get_children():
 		existing_text_messages.queue_free()
 
-	var new_timestamp = TIMESTAMP_TEXT.instantiate()
-	new_timestamp.text = "Today 10:49"
-	text_messages_field.add_child(new_timestamp)
-
-	for message_origin in contact_messages.keys():
-		var new_split_text_message = split_message(contact_messages[message_origin])
-		
-		# create new text message with prefab
-		if "sender" in message_origin:
-			var new_sender_text = SENDER_PURPLE_TEXT.instantiate()
-			new_sender_text.text = new_split_text_message
-			text_messages_field.add_child(new_sender_text)
-		elif "caller" in message_origin:
-			var new_caller_text = CALLER_GREEN_TEXT.instantiate()
-			new_caller_text.text = new_split_text_message
-			text_messages_field.add_child(new_caller_text)
+	for datetime in contact_messages.keys():
+		var new_timestamp = TIMESTAMP_TEXT.instantiate()
+		new_timestamp.text = datetime
+		text_messages_field.add_child(new_timestamp)
+		for message_origin in contact_messages[datetime]:
+			var message_text = contact_messages[datetime][message_origin]
+			var new_split_text_message = split_message(message_text)
+			
+			# create new text message with prefab
+			if "sender" in message_origin:
+				var new_sender_text = SENDER_PURPLE_TEXT.instantiate()
+				new_sender_text.text = new_split_text_message
+				text_messages_field.add_child(new_sender_text)
+			elif "caller" in message_origin:
+				var new_caller_text = CALLER_GREEN_TEXT.instantiate()
+				new_caller_text.text = new_split_text_message
+				text_messages_field.add_child(new_caller_text)
 
 func set_messages_header() -> void:
 	# set the header based on contact name

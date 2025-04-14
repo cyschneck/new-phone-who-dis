@@ -62,16 +62,38 @@ func populate_contacts_message_list() -> void:
 		var current_guess = "[b]" + GameManager.guess_name_with_number_dict[new_contact.contact_number] + "[/b]"
 		contact_name.text = current_guess
 
-		# set displayed text to last string of the last text
 		var message = new_contact.get_child(1).get_child(1)
 		var message_keys = GameManager.messages_data[contact]["messages"].keys()
-		var last_message = message_keys[-1]
-		message.text = GameManager.messages_data[contact]["messages"][last_message]
+		
+		var contact_datetime = new_contact.get_child(1).get_child(0).get_child(0).get_child(1)
+		var datetime_string = determine_datetime(message_keys[-1])
+		contact_datetime.text = datetime_string
+	
+		# set displayed text to last string of the last text
+		var last_message = GameManager.messages_data[contact]["messages"][message_keys[-1]].values()[-1]
+		message.text = last_message
 	
 		# add contact and HSeparator to contact_lists
 		contacts_list.add_child(new_contact)
 		var new_h_sep = HSeparator.new()
 		contacts_list.add_child(new_h_sep)
+
+func determine_datetime(datetime: String) -> String:
+	# set displayed datetime to last string of the last text
+	var date_time = datetime.split(" ")
+
+	var full_datetime_string = date_time[0]
+	# if today, display only time
+	if date_time[0] == "5/5/2025":
+		full_datetime_string = date_time[2] # Today
+	# if yesterday, display yesterday
+	if date_time[0] == "5/4/2025":
+		full_datetime_string = "Yesterday"
+	# if within a week, display weekday
+	if date_time[0] in ["5/3/2025", "5/2/2025", "5/1/2025",
+						"4/30/2025", "4/29/2025", "4/28/2025"]:
+		full_datetime_string = date_time[1]
+	return full_datetime_string
 
 ## When Header Button is Pressed, open Number Popup
 func _on_button_pressed() -> void:

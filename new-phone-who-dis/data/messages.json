@@ -2,100 +2,133 @@
   "message 1": {
 	"contact_name": "Atheylna Dinn <3",
 	"messages": {
-	  "caller1": "you owe me a new phone, idiot",
-	  "sender1": "new phone, who dis?",
-	  "sender2": "just kidding, but I don't think your contacts transfered over, my bad",
-	  "sender3": "everything should be unlocked tho"
+		"5/5/2025 Monday 10:49 AM": {
+		  "caller1": "you owe me a new phone, idiot",
+		  "sender1": "new phone, who dis?",
+		  "sender2": "just kidding, but I don't think your contacts transfered over, my bad",
+		  "sender3": "everything should be unlocked tho"
+		}
 	}
   },
   "message 2": {
 	"contact_name": "Mom",
 	"messages": {
-	  "sender1": "this is the second message2-2",
-	  "sender2": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
-	  "caller1": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
-	  "caller2": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
-	  "caller3": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
-	  "caller4": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
-	  "caller5": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
+		"5/4/2024 Sunday 10:49 AM": {
+		  "sender1": "this is the second message2-2",
+		  "sender2": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
+		  "caller1": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
+		  "caller2": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
+		  "caller3": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
+		  "caller4": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
+		  "caller5": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
+		}
 	}
   },
   "message 3": {
 	"contact_name": "Giles Deacon",
 	"messages": {
-	  "sender1": "Call your mother",
-	  "caller1": "It went to voicemail",
-	  "sender2": "Call your mother"
+		"5/4/2025 Sunday 11:03 AM": {
+		  "sender1": "Call your mother",
+		  "caller1": "It went to voicemail"
+		},
+		"5/4/2025 Sunday 5:13 PM": {
+		  "sender2": "Call your mother"
+		}
 	}
   },
   "message 4": {
 	"contact_name": "Tim and Mary Fisher",
 	"messages": {
-	  "sender1": "contact 4",
-	  "sender2": "please make them effective by the first of march if you can...",
-	  "caller1": "this is the third message3-2"
+		"4/29/2025 Tuesday 3:33 PM": {
+		  "sender1": "contact 4",
+		  "sender2": "please make them effective by the first of march if you can...",
+		  "caller1": "this is the third message3-2"
+	}
 	}
   },
   "message 5": {
 	"contact_name": "Boyd",
 	"messages": {
-	  "sender1": "Miss you",
-	  "sender2": "Miss you",
+		"4/29/2025 Sunday 11:41 AM": {
+		  "sender1": "Miss you",
+		  "sender2": "Miss you",
+		}
 	}
   },
   "message 6": {
 	"contact_name": "Issac Honeylick",
 	"messages": {
-	  "sender1": "contact six",
-	  "caller1": "this is the second message2-2",
+		"3/16/2025 Sunday 11:42 AM" : {
+		  "sender1": "contact six",
+		  "caller1": "this is the second message2-2",
+		}
 	}
   },
   "message 7": {
 	"contact_name": "Echo Wintermute",
 	"messages": {
-	  "caller1": "contact seven",
-	  "caller2": "this is the second message2-2",
-	  "caller3": "this is the third message3-2"
+		"1/6/2025 Monday 11:42 AM" : {
+		  "caller1": "contact seven",
+		  "caller2": "this is the second message2-2",
+		  "caller3": "this is the third message3-2"
+		}
 	}
   },
   "message 8": {
 	"contact_name": "Grant Monument",
 	"messages": {
-	  "sender1":"contact eight",
-	  "caller1": "this is the second message2-2",
-	  "sender2": "this is the third message3-2"
+		"1/3/2025 Friday 11:42 AM" : {
+		  "sender1":"contact eight",
+		  "caller1": "this is the second message2-2",
+		  "sender2": "this is the third message3-2"
+		}
 	}
   },
   "message 9": {
 	"contact_name": "Dough Nutty",
 	"messages": {
-	  "sender1": "contact nine",
-	  "sender2": "this is the second message2-2",
-	  "caller1": "this is the third message3-2"
+		"1/2/2025 Thursday 11:42 AM" : {
+		  "sender1": "contact nine",
+		  "sender2": "this is the second message2-2",
+		  "caller1": "this is the third message3-2"
+		}
 	}
   },
   "message 10": {
 	"contact_name": "Eddie",
 	"messages": {
-	  "caller1": "contact ten",
-	  "sender1": "this is the second message2-2",
-	  "caller2": "this is the third message3-2"
+		"1/2/2025 Thursday 11:42 AM" : {
+		  "caller1": "contact ten",
+		  "sender1": "this is the second message2-2",
+		  "caller2": "this is the third message3-2"
+		}
 	}
   },
   "message 10": {
 	"contact_name": "Sigrith Loudermilk",
 	"messages": {
-	  "sender1": "Hi, this is your brother's roommate, he gave me your number",
-	  "sender2": "Merry Christmas!",
-	  "caller1": "Merry Christmas"
+		"12/25/2025 Wednesday 5:40 PM": {
+		  "sender1": "Hi, this is your brother's roommate, he gave me your number",
+		  "sender2": "Merry Christmas!",
+		  "caller1": "Merry Christmas"
+		}
 	}
   },
   "message 11": {
 	"contact_name": "Dad",
 	"messages": {
-	  "sender1": "Happy Birthday",
-	  "sender2": "Happy Birthday",
-	  "caller1": "Thanks!"
+		"10/14/2022 Friday 4:32 PM": {
+			"sender1": "Happy Birthday",
+			"caller1": "Thanks!"
+		},
+		"10/14/2023 Saturday 12:11 PM": {
+			"sender1": "Happy Birthday",
+			"caller1": "Thanks!"
+		},
+		"10/14/2024 Monday 9:05 AM": {
+			"sender1": "Happy Birthday",
+			"caller1": "Thanks!"
+		}
 	}
   },
 }
