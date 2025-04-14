@@ -12,7 +12,7 @@ var contact_list_data: Dictionary = {} # JSON data for contact
 # Store Correct Contact Name and Number
 # Full Name = XXX-XXX-XXXX
 var correct_name_with_number: Dictionary = {}
-var correct_and_sync: Array = []
+var correct_and_sync_list: Array = []
 const CORRECT_POPUP = preload("res://scenes/manager/correct_popup.tscn")
 const CORRECT_GUESS = preload("res://scenes/manager/correct_guess.tscn")
 
@@ -69,17 +69,16 @@ func set_guess_dictionary(contact_number: String, guess: String) -> void:
 
 # check if three contacts are correct
 func check_for_correct() -> void:
-	var correct_guesses = 0
-	var all_correct = []
+	var correct_guesses = []
 	for contact_num in guess_name_with_number_dict.keys():
 		if guess_name_with_number_dict[contact_num] != contact_num:
 			var guess_full_name = guess_name_with_number_dict[contact_num]
 			if correct_name_with_number[guess_full_name] == contact_num:
-				if contact_num not in all_correct:
-					correct_guesses += 1
-					all_correct.append(guess_full_name)
+				if guess_full_name not in correct_and_sync_list:
+					# only add contacts not already synced
+					correct_guesses.append(guess_full_name)
 
-	if correct_guesses == 3:
+	if len(correct_guesses) == 2:
 		# remove existing children
 		var correct_popup = CORRECT_POPUP.instantiate()
 		var correct_answers_box = correct_popup.get_child(1).get_child(1).get_child(0)
@@ -94,8 +93,8 @@ func check_for_correct() -> void:
 		correct_answers_box.add_child(head_hsep)
 
 		# add correct guesses
-		for correct_guess in all_correct:
-			correct_and_sync.append(correct_guess)
+		for correct_guess in correct_guesses:
+			correct_and_sync_list.append(correct_guess)
 			var correct_answer = CORRECT_GUESS.instantiate()
 			correct_answer.text = "[b]" + correct_guess + " -> " + correct_name_with_number[correct_guess] + "[/b]"
 			correct_answers_box.add_child(correct_answer)
