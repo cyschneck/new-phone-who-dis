@@ -85,8 +85,7 @@ func determine_datetime(datetime: String) -> String:
 			datetime_string = date_time[1] + ", " + month + " " + dates[1] + " at " + date_time[2] + " " + date_time[3]
 		else:
 			datetime_string = date_time[1] + ", " + month + " " + dates[1] + " " + dates[-1] + " at " + date_time[2] + " " + date_time[3]
-			
-	
+
 	return datetime_string
 
 func set_messages_header() -> void:

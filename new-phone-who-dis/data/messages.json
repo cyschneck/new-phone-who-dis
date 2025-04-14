@@ -2,8 +2,12 @@
   "message 1": {
 	"contact_name": "Atheylna Dinn <3",
 	"messages": {
-		"5/5/2025 Monday 10:49 AM": {
+		"5/4/2025 Sunday 9:49 PM": {
+		  "sender1": "missed you today, wanna grab dinner?",
 		  "caller1": "you owe me a new phone, idiot",
+		  "sender2": "T﹏T",
+		},
+		"5/5/2025 Monday 10:49 AM": {
 		  "sender1": "new phone, who dis?",
 		  "sender2": "just kidding, but I don't think your contacts transfered over, my bad",
 		  "sender3": "everything should be unlocked tho"
@@ -119,11 +123,15 @@
 	"messages": {
 		"10/14/2022 Friday 4:32 PM": {
 			"sender1": "Happy Birthday",
-			"caller1": "Thanks!"
+			"caller1": "Aw, thanks :)"
 		},
 		"10/14/2023 Saturday 12:11 PM": {
 			"sender1": "Happy Birthday",
-			"caller1": "Thanks!"
+			"caller1": ":)"
+		},
+		"12/20/2024 Firday 10:05 AM": {
+			"sender1": "Have you talked to Boyd recently?",
+			"caller1": "Yeah, he has a new number, let me find it",
 		},
 		"10/14/2024 Monday 9:05 AM": {
 			"sender1": "Happy Birthday",
