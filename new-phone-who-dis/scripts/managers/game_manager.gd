@@ -2,6 +2,9 @@ extends Node
 
 # Game/Scene Manager to save between scenes
 
+# FAQ
+const FAQ_POPUP = preload("res://scenes/manager/faq_popup.tscn")
+
 # Store message data from JSON
 const MESSAGES_JSON = "res://data/messages.json"
 var messages_data: Dictionary = {} # JSON data for each button
@@ -118,3 +121,15 @@ func order_contacts() -> void:
 	
 	sorted_contacts = contact_ordering.keys()
 	sorted_contacts.sort() # sort list of strings
+
+func display_faq(scene_name: String) -> void:
+	# display FAQ with scene specific details
+	get_tree().paused = true
+	var faq_popup = FAQ_POPUP.instantiate()
+	if scene_name == "messages":
+		faq_popup.get_child(2).visible = true
+		faq_popup.get_child(3).visible = false
+	if scene_name == "contacts":
+		faq_popup.get_child(2).visible = false
+		faq_popup.get_child(3).visible = true
+	self.add_child(faq_popup)

@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://ccvwhhb8t2b4t"]
 
 [ext_resource type="Script" uid="uid://cfmtt801jgikh" path="res://scripts/contacts/contacts_manager.gd" id="1_wdjsl"]
-[ext_resource type="Texture2D" uid="uid://b4hrwgkmvlmdj" path="res://images/icons8-settings-50-0CCE6B.png" id="2_3nqok"]
-[ext_resource type="Script" uid="uid://f4530de140nn" path="res://scripts/managers/settings.gd" id="3_yln2p"]
+[ext_resource type="Texture2D" uid="uid://cgh3l5dsp78rp" path="res://images/faq_button.png" id="2_wdjsl"]
+[ext_resource type="Script" uid="uid://bmfqpev5q4mic" path="res://scripts/managers/faq_button.gd" id="3_wdjsl"]
 [ext_resource type="PackedScene" uid="uid://c5rfdd52g1a61" path="res://scenes/contacts/contact_name.tscn" id="4_q0cfa"]
 [ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="5_0si4w"]
 [ext_resource type="Script" uid="uid://da3kvyqflppek" path="res://scripts/contacts/return_to_messages.gd" id="6_gt0pa"]
@@ -52,7 +52,7 @@ placeholder_text = "Search Contacts"
 keep_editing_on_text_submit = true
 emoji_menu_enabled = false
 
-[node name="SettingsButton" type="TextureButton" parent="BackgroundColor"]
+[node name="FAQButton" type="TextureButton" parent="BackgroundColor"]
 top_level = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
@@ -60,8 +60,9 @@ offset_left = 351.0
 offset_top = 21.0
 offset_right = 401.0
 offset_bottom = 71.0
-texture_normal = ExtResource("2_3nqok")
-script = ExtResource("3_yln2p")
+texture_normal = ExtResource("2_wdjsl")
+stretch_mode = 0
+script = ExtResource("3_wdjsl")
 
 [node name="ContactsLeftList" type="Control" parent="BackgroundColor"]
 unique_name_in_owner = true
@@ -323,6 +324,7 @@ script = ExtResource("6_gt0pa")
 
 [node name="PhoneSelectPopup" type="Control" parent="BackgroundColor"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -419,7 +421,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_wdjsl")
 text = "X"
 
-[connection signal="pressed" from="BackgroundColor/SettingsButton" to="BackgroundColor/SettingsButton" method="_on_pressed"]
+[connection signal="pressed" from="BackgroundColor/FAQButton" to="BackgroundColor/FAQButton" method="_on_pressed"]
 [connection signal="pressed" from="BackgroundColor/FullContactRight/TopFrame/HeaderContact/Phone Number/SelectNumber" to="ContactsManager" method="_on_select_number_pressed"]
 [connection signal="pressed" from="BackgroundColor/FullContactRight/ReturnToMessages" to="BackgroundColor/FullContactRight/ReturnToMessages" method="_on_pressed"]
 [connection signal="pressed" from="BackgroundColor/PhoneSelectPopup/ClosePopup" to="ContactsManager" method="_on_close_popup_pressed"]

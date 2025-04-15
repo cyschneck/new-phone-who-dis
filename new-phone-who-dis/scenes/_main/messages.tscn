@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://do3e4ldyqejfj" path="res://scripts/messages/messages_manager.gd" id="1_dppxf"]
 [ext_resource type="Script" uid="uid://u181dkwfqb85" path="res://scripts/messages/search_bar.gd" id="2_jy8bd"]
-[ext_resource type="Texture2D" uid="uid://b4hrwgkmvlmdj" path="res://images/icons8-settings-50-0CCE6B.png" id="3_bdw3y"]
-[ext_resource type="Script" uid="uid://f4530de140nn" path="res://scripts/managers/settings.gd" id="4_d67uv"]
+[ext_resource type="Texture2D" uid="uid://cgh3l5dsp78rp" path="res://images/faq_button.png" id="3_bdw3y"]
+[ext_resource type="Script" uid="uid://bmfqpev5q4mic" path="res://scripts/managers/faq_button.gd" id="4_bdw3y"]
 [ext_resource type="PackedScene" uid="uid://cmb6w2h80yo6f" path="res://scenes/messages/contact_with_last_message.tscn" id="5_dvosh"]
 [ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="6_l0wf5"]
 [ext_resource type="Script" uid="uid://c0fwdldoayhqb" path="res://scripts/messages/return_to_contacts.gd" id="7_wevnu"]
@@ -67,7 +67,7 @@ keep_editing_on_text_submit = true
 emoji_menu_enabled = false
 script = ExtResource("2_jy8bd")
 
-[node name="SettingsButton" type="TextureButton" parent="BackgroundColor"]
+[node name="FAQButton" type="TextureButton" parent="BackgroundColor"]
 top_level = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
@@ -76,7 +76,8 @@ offset_top = 21.0
 offset_right = 401.0
 offset_bottom = 71.0
 texture_normal = ExtResource("3_bdw3y")
-script = ExtResource("4_d67uv")
+stretch_mode = 4
+script = ExtResource("4_bdw3y")
 
 [node name="ContactMessageLeft" type="Control" parent="BackgroundColor"]
 unique_name_in_owner = true
@@ -394,7 +395,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_bdw3y")
 text = "X"
 
 [connection signal="text_submitted" from="BackgroundColor/SearchBar" to="BackgroundColor/SearchBar" method="_on_text_submitted"]
-[connection signal="pressed" from="BackgroundColor/SettingsButton" to="BackgroundColor/SettingsButton" method="_on_pressed"]
+[connection signal="pressed" from="BackgroundColor/FAQButton" to="BackgroundColor/FAQButton" method="_on_pressed"]
 [connection signal="pressed" from="BackgroundColor/MessageFieldRight/Header/Header/Button" to="MessagesManager" method="_on_button_pressed"]
 [connection signal="pressed" from="BackgroundColor/MessageFieldRight/Header/ContactsListButton" to="BackgroundColor/MessageFieldRight/Header/ContactsListButton" method="_on_pressed"]
 [connection signal="pressed" from="BackgroundColor/SelectContactPopup/PopupBackgroundColor/ClosePopup" to="BackgroundColor/SelectContactPopup" method="_on_close_popup_pressed"]
