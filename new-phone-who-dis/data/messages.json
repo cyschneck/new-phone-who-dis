@@ -5,7 +5,7 @@
 		"5/4/2025 Sunday 9:49 PM": {
 		  "sender1": "missed you today, wanna grab dinner?",
 		  "caller1": "you owe me a new phone, idiot",
-		  "sender2": "T﹏T",
+		  "sender2": "T_T",
 		},
 		"5/5/2025 Monday 10:49 AM": {
 		  "sender1": "new phone, who dis?",
@@ -44,9 +44,9 @@
 	"contact_name": "Tim and Mary Fisher",
 	"messages": {
 		"4/29/2025 Tuesday 3:33 PM": {
-		  "sender1": "contact 4",
+		  "sender1": "checks due on the 30th",
 		  "sender2": "please make them effective by the first of march if you can...",
-		  "caller1": "this is the third message3-2"
+		  "caller1": "I'll tell Grant"
 	}
 	}
   },
@@ -55,7 +55,10 @@
 	"messages": {
 		"4/29/2025 Sunday 11:41 AM": {
 		  "sender1": "Miss you",
-		  "sender2": "Miss you",
+		  "sender2": "Miss you"
+		},
+		"4/29/2025 Sunday 1:41 PM": {
+		  "caller1": "yeah I bet",
 		}
 	}
   },
@@ -126,7 +129,7 @@
 			"caller1": "Aw, thanks :)"
 		},
 		"10/14/2023 Saturday 12:11 PM": {
-			"sender1": "Happy Birthday",
+			"sender1": "Happy Birthday :)",
 			"caller1": ":)"
 		},
 		"12/20/2024 Firday 10:05 AM": {

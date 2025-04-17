@@ -88,19 +88,6 @@ func determine_datetime(datetime: String) -> String:
 
 	return datetime_string
 
-func set_messages_header() -> void:
-	# set the header based on contact name
-	var message_manager = get_tree().get_nodes_in_group("managers")[0]
-	var current_guess = GameManager.guess_name_with_number_dict[contact_number]
-	current_guess = "[b]" + current_guess + "[/b]"
-
-	# set main header
-	var header = message_manager.message_field_right.get_child(1).get_child(0)
-	header.text = current_guess
-
-	# set contact field on left
-	var contact_field = self.get_child(1).get_child(0).get_child(0).get_child(0)
-	contact_field.text = current_guess
 
 func split_message(full_message: String) -> String:
 	# split text after XX characters, but without splitting up a word
@@ -121,3 +108,33 @@ func split_message(full_message: String) -> String:
 		full_length += 1
 		current_index += 1
 	return new_split_text
+
+func set_messages_header() -> void:
+	# set the header based on contact name
+	var message_manager = get_tree().get_nodes_in_group("managers")[0]
+	var current_guess = GameManager.guess_name_with_number_dict[contact_number]
+
+	# set main header
+	var header = message_manager.message_field_right.get_child(1).get_child(0)
+	var bold_guess = "[b]" + current_guess + "[/b]"
+	header.text = bold_guess
+
+	# set correct contact header to white and disabled
+	header.get_child(0).disabled = false
+	header["theme_override_colors/default_color"] = Color("#5a5a5a") # Grey
+	correct_header(current_guess)
+
+	# set contact field on left
+	var contact_field = self.get_child(1).get_child(0).get_child(0).get_child(0)
+	contact_field.text = bold_guess
+
+func correct_header(contact_name: String) -> void:
+	# update the header when headers are correct
+	# set header to white, disable button
+	var message_manager = get_tree().get_nodes_in_group("managers")[0]
+	if contact_name in GameManager.correct_and_sync_list:
+		var header = message_manager.message_field_right.get_child(1).get_child(0)
+		header["theme_override_colors/default_color"] = Color("White")
+		header.get_child(0).disabled = true
+		# turn off popup
+		message_manager.select_contact_popup.visible = false

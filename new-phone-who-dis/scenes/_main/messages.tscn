@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d4fcn2e8yiomf"]
+[gd_scene load_steps=16 format=3 uid="uid://d4fcn2e8yiomf"]
 
 [ext_resource type="Script" uid="uid://do3e4ldyqejfj" path="res://scripts/messages/messages_manager.gd" id="1_dppxf"]
 [ext_resource type="Script" uid="uid://u181dkwfqb85" path="res://scripts/messages/search_bar.gd" id="2_jy8bd"]
@@ -11,6 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://dyfduqub1pf0c" path="res://scenes/messages/timestamp_text.tscn" id="8_bdw3y"]
 [ext_resource type="PackedScene" uid="uid://dnd2uyg2ruxms" path="res://scenes/messages/caller_green_text.tscn" id="9_sgs8y"]
 [ext_resource type="PackedScene" uid="uid://dj7e465on4uhf" path="res://scenes/messages/popup_messages_name.tscn" id="11_bdw3y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bdw3y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d67uv"]
+bg_color = Color(0.340499, 0.640178, 0.794363, 1)
 
 [sub_resource type="GDScript" id="GDScript_dvosh"]
 script/source = "extends Control
@@ -190,6 +195,8 @@ offset_left = 283.0
 offset_right = -277.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bdw3y")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d67uv")
 flat = true
 
 [node name="HSeparator" type="HSeparator" parent="BackgroundColor/MessageFieldRight/Header"]

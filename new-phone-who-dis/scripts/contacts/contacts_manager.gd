@@ -29,6 +29,7 @@ func populate_contacts_list() -> void:
 	contact_list.add_child(new_h_sep)
 
 	# Display contacts in order
+	var first_contact
 	for contact in GameManager.sorted_contacts:
 		var new_contact_name = CONTACT_NAME_PREFAB.instantiate()
 		var contact_full_name = GameManager.contact_ordering[contact]
@@ -53,6 +54,8 @@ func populate_contacts_list() -> void:
 		new_contact_name.icon_path = contact_data["icon"]
 		new_contact_name.description = contact_data["description"]
 		new_contact_name.number = contact_data["number"]
+		new_contact_name.ringtone = contact_data["ringtone"]
+		new_contact_name.recent_calls_dict = contact_data["recent_calls"]
 		
 		contact_list.add_child(new_contact_name)
 		var add_h_sep = HSeparator.new()
@@ -60,18 +63,10 @@ func populate_contacts_list() -> void:
 		
 		if contact == GameManager.sorted_contacts[0]:
 			# setup default contact based on first in list
-			set_default_starter(new_contact_name)
+			first_contact = new_contact_name
 
-func set_default_starter(first_contact: Node) -> void:
-	# set up the default contact being displayed on start
-	var contact_header = full_contact_right.get_child(1).get_child(1)
-	contact_header.get_child(1).text = "[b]" + first_contact.name + "[/b]"
-	
-	var description_notes = full_contact_right.get_child(2).get_child(0).get_child(0)
-	description_notes.get_child(0).get_child(1).text = first_contact.description
-	
-	var guess_num = return_guess_number(first_contact.name)
-	contact_header.get_child(2).text = "[b]" + guess_num + "[/b]"
+	# select first contact
+	first_contact.set_contact()
 
 func return_guess_number(contact_name: String) -> String:
 	var guess_number = "XXX-XXX-XXXX" # default

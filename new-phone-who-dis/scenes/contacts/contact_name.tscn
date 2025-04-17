@@ -32,5 +32,4 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_bhuyi")
 toggle_mode = true
 flat = true
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

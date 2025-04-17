@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://ccvwhhb8t2b4t"]
+[gd_scene load_steps=10 format=3 uid="uid://ccvwhhb8t2b4t"]
 
 [ext_resource type="Script" uid="uid://cfmtt801jgikh" path="res://scripts/contacts/contacts_manager.gd" id="1_wdjsl"]
 [ext_resource type="Texture2D" uid="uid://cgh3l5dsp78rp" path="res://images/faq_button.png" id="2_wdjsl"]
 [ext_resource type="Script" uid="uid://bmfqpev5q4mic" path="res://scripts/managers/faq_button.gd" id="3_wdjsl"]
 [ext_resource type="PackedScene" uid="uid://c5rfdd52g1a61" path="res://scenes/contacts/contact_name.tscn" id="4_q0cfa"]
 [ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="5_0si4w"]
+[ext_resource type="PackedScene" uid="uid://df3so81e18l2e" path="res://scenes/contacts/call_description.tscn" id="6_3nqok"]
 [ext_resource type="Script" uid="uid://da3kvyqflppek" path="res://scripts/contacts/return_to_messages.gd" id="6_gt0pa"]
 [ext_resource type="PackedScene" uid="uid://dy6mcnphodghq" path="res://scenes/contacts/popup_value.tscn" id="7_iprsr"]
 
@@ -233,6 +234,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SelectNumber" type="Button" parent="BackgroundColor/FullContactRight/TopFrame/HeaderContact/Phone Number"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -268,44 +270,62 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
+theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 
-[node name="BottomDescriptions" type="VBoxContainer" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer"]
+[node name="BottomDescription" type="GridContainer" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 30
+columns = 2
 
-[node name="Notes" type="VBoxContainer" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescriptions"]
+[node name="NotesDescription" type="VBoxContainer" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescription"]
 layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="Notes" type="RichTextLabel" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescriptions/Notes"]
+[node name="Notes" type="RichTextLabel" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescription/NotesDescription"]
 layout_mode = 2
 bbcode_enabled = true
 text = "[b]Notes:[/b]"
 fit_content = true
 
-[node name="Description" type="RichTextLabel" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescriptions/Notes"]
+[node name="Description" type="RichTextLabel" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescription/NotesDescription"]
 layout_mode = 2
-text = "Text Description"
+text = "Text Description Text Description Text Description Text Description Text Description Text Description "
 fit_content = true
 
-[node name="Ringtone" type="VBoxContainer" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescriptions"]
+[node name="RecentCalls" type="VBoxContainer" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescription"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RecentCalls" type="RichTextLabel" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescription/RecentCalls"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b]Recent Calls:[/b]"
+fit_content = true
+
+[node name="CallDescription" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescription/RecentCalls" instance=ExtResource("6_3nqok")]
+layout_mode = 2
+text = "May 5, 2025"
+
+[node name="CallDescription2" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescription/RecentCalls" instance=ExtResource("6_3nqok")]
 layout_mode = 2
 
-[node name="Ringtone" type="RichTextLabel" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescriptions/Ringtone"]
+[node name="CallDescription3" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescription/RecentCalls" instance=ExtResource("6_3nqok")]
+layout_mode = 2
+
+[node name="Ringtone" type="VBoxContainer" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescription"]
+layout_mode = 2
+
+[node name="Ringtone" type="RichTextLabel" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescription/Ringtone"]
 layout_mode = 2
 bbcode_enabled = true
 text = "[b]Ringtone:[/b]"
 fit_content = true
 
-[node name="Description" type="RichTextLabel" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescriptions/Ringtone"]
+[node name="Description" type="RichTextLabel" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescription/Ringtone"]
 layout_mode = 2
 text = "Bell Tower"
 fit_content = true
-
-[node name="ColorRect" type="ColorRect" parent="BackgroundColor/FullContactRight/BottomFrame/MarginContainer/BottomDescriptions/Ringtone"]
-layout_mode = 2
 
 [node name="ReturnToMessages" type="TextureButton" parent="BackgroundColor/FullContactRight"]
 layout_mode = 1

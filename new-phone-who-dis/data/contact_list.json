@@ -5,6 +5,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, IH",
 		"number": "111-111-1111",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 2": {
 		"first_name": "Echo",
@@ -12,6 +18,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, EW",
 		"number": "303-891-0123",
+		"ringtone": "Rock and Roll",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 3": {
 		"first_name": "Grant",
@@ -19,6 +31,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, GM, roommate",
 		"number": "303-333-333",
+		"ringtone": "Bell Tower",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 4": {
 		"first_name": "Dough",
@@ -26,6 +44,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, DN, job",
 		"number": "303-444-4444",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 5": {
 		"first_name": "Naval Observatory Standard Time",
@@ -33,6 +57,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, StandardTime",
 		"number": "202-762-1401",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 6": {
 		"first_name": "Poison Control",
@@ -40,6 +70,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, poison",
 		"number": "800-222-1222",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 7": {
 		"first_name": "Eddie",
@@ -47,6 +83,12 @@
 		"icon": "icon_path",
 		"description": "Ignore his lies",
 		"number": "303-777-777",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 8": {
 		"first_name": "Screech",
@@ -54,6 +96,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, SA",
 		"number": "303-888-8886",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 9": {
 		"first_name": "Sigrith",
@@ -61,6 +109,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, SL",
 		"number": "303-833-3388",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 10": {
 		"first_name": "Bathsheba",
@@ -68,6 +122,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, BB",
 		"number": "999-999-9999",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 11": {
 		"first_name": "Atheylna",
@@ -75,6 +135,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, AD",
 		"number": "444-555-6669",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 12": {
 		"first_name": "Sabine",
@@ -82,6 +148,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, sabine",
 		"number": "111-222-4444",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 13": {
 		"first_name": "Calliope",
@@ -89,6 +161,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, CF",
 		"number": "666-666-4444",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 14": {
 		"first_name": "Ishmael",
@@ -96,6 +174,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, IM",
 		"number": "191-929-4444",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 15": {
 		"first_name": "Trinity",
@@ -103,6 +187,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, TC",
 		"number": "202-444-5943",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 16": {
 		"first_name": "Giles",
@@ -110,6 +200,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, GD, stepdad",
 		"number": "333-222-1112",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 17": {
 		"first_name": "Mom",
@@ -117,6 +213,12 @@
 		"icon": "icon_path",
 		"description": "This is description, mom",
 		"number": "333-555-1112",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 18": {
 		"first_name": "Dad",
@@ -124,6 +226,12 @@
 		"icon": "icon_path",
 		"description": "Dad",
 		"number": "720-555-0220",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 19": {
 		"first_name": "Oma",
@@ -131,6 +239,12 @@
 		"icon": "icon_path",
 		"description": "This is a description, grandmother",
 		"number": "999-555-9999",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 20": {
 		"first_name": "Tim and Mary",
@@ -138,6 +252,12 @@
 		"icon": "icon_path",
 		"description": "Landlords",
 		"number": "720-555-1111",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 21": {
 		"first_name": "Boyd",
@@ -145,6 +265,12 @@
 		"icon": "icon_path",
 		"description": "Brother",
 		"number": "303-555-0102",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 10:49 AM": "Missed Call",
+			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+		}
 	},
 	"contact 22": {
 		"first_name": "End",
@@ -152,5 +278,9 @@
 		"icon": "icon_path",
 		"description": "End Credits",
 		"number": "555-555-5555",
+		"ringtone": "Smooth Jazz",
+		"recent_calls": {
+			"5/3/2025 10:49 AM": "Missed Call",
+		}
 	},
 }
