@@ -1,7 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://d4fcn2e8yiomf"]
+[gd_scene load_steps=15 format=3 uid="uid://d4fcn2e8yiomf"]
 
 [ext_resource type="Script" uid="uid://do3e4ldyqejfj" path="res://scripts/messages/messages_manager.gd" id="1_dppxf"]
-[ext_resource type="Script" uid="uid://u181dkwfqb85" path="res://scripts/messages/search_bar.gd" id="2_jy8bd"]
 [ext_resource type="Texture2D" uid="uid://cgh3l5dsp78rp" path="res://images/faq_button.png" id="3_bdw3y"]
 [ext_resource type="Script" uid="uid://bmfqpev5q4mic" path="res://scripts/managers/faq_button.gd" id="4_bdw3y"]
 [ext_resource type="PackedScene" uid="uid://cmb6w2h80yo6f" path="res://scenes/messages/contact_with_last_message.tscn" id="5_dvosh"]
@@ -37,8 +36,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_right = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
@@ -51,38 +48,14 @@ mouse_filter = 1
 script = ExtResource("1_dppxf")
 
 [node name="BackgroundColor" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1200.0
-offset_bottom = 720.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 1
 color = Color(0.0278246, 0.0278245, 0.0278245, 1)
-
-[node name="SearchBar" type="LineEdit" parent="BackgroundColor"]
-top_level = true
-custom_minimum_size = Vector2(0, 31)
-layout_mode = 0
-offset_left = 33.0
-offset_top = 31.0
-offset_right = 323.0
-offset_bottom = 62.0
-theme_override_colors/font_placeholder_color = Color(0.673164, 0.673164, 0.673164, 1)
-theme_override_constants/outline_size = 2
-placeholder_text = "Search Messages"
-keep_editing_on_text_submit = true
-emoji_menu_enabled = false
-script = ExtResource("2_jy8bd")
-
-[node name="FAQButton" type="TextureButton" parent="BackgroundColor"]
-top_level = true
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 0
-offset_left = 351.0
-offset_top = 21.0
-offset_right = 401.0
-offset_bottom = 71.0
-texture_normal = ExtResource("3_bdw3y")
-stretch_mode = 4
-script = ExtResource("4_bdw3y")
 
 [node name="ContactMessageLeft" type="Control" parent="BackgroundColor"]
 unique_name_in_owner = true
@@ -97,9 +70,9 @@ metadata/_edit_use_anchors_ = true
 [node name="MessagesLabel" type="RichTextLabel" parent="BackgroundColor/ContactMessageLeft"]
 layout_mode = 1
 offset_left = 20.0
-offset_top = 85.0
+offset_top = 40.0
 offset_right = 156.0
-offset_bottom = 132.0
+offset_bottom = 87.0
 theme_override_font_sizes/bold_font_size = 25
 bbcode_enabled = true
 text = "[b]Messages[/b]"
@@ -107,9 +80,9 @@ text = "[b]Messages[/b]"
 [node name="ContactMessageScrollContainer" type="ScrollContainer" parent="BackgroundColor/ContactMessageLeft"]
 custom_minimum_size = Vector2(330, 500)
 layout_mode = 0
-offset_top = 134.0
+offset_top = 90.0
 offset_right = 433.0
-offset_bottom = 703.0
+offset_bottom = 704.0
 
 [node name="Contacts" type="VBoxContainer" parent="BackgroundColor/ContactMessageLeft/ContactMessageScrollContainer"]
 unique_name_in_owner = true
@@ -401,8 +374,18 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_bdw3y")
 text = "X"
 
-[connection signal="text_submitted" from="BackgroundColor/SearchBar" to="BackgroundColor/SearchBar" method="_on_text_submitted"]
-[connection signal="pressed" from="BackgroundColor/FAQButton" to="BackgroundColor/FAQButton" method="_on_pressed"]
+[node name="FAQButton" type="TextureButton" parent="BackgroundColor"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 351.0
+offset_top = 21.0
+offset_right = 401.0
+offset_bottom = 71.0
+texture_normal = ExtResource("3_bdw3y")
+stretch_mode = 4
+script = ExtResource("4_bdw3y")
+
 [connection signal="pressed" from="BackgroundColor/MessageFieldRight/Header/Header/Button" to="MessagesManager" method="_on_button_pressed"]
 [connection signal="pressed" from="BackgroundColor/MessageFieldRight/Header/ContactsListButton" to="BackgroundColor/MessageFieldRight/Header/ContactsListButton" method="_on_pressed"]
 [connection signal="pressed" from="BackgroundColor/SelectContactPopup/PopupBackgroundColor/ClosePopup" to="BackgroundColor/SelectContactPopup" method="_on_close_popup_pressed"]
+[connection signal="pressed" from="BackgroundColor/FAQButton" to="BackgroundColor/FAQButton" method="_on_pressed"]

@@ -4,4 +4,4 @@ const MESSAGES_SCENE = "res://scenes/_main/messages.tscn"
 
 func _on_pressed() -> void:
 	# return to main messages scene
-	get_tree().change_scene_to_file(MESSAGES_SCENE)
+	SceneTransition.change_scene(MESSAGES_SCENE, 3)
