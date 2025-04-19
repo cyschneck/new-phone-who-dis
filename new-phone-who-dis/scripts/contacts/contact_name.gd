@@ -31,8 +31,13 @@ func set_contact() -> void:
 	phone_num.text = "[b]" + guess_num + "[/b]"
 	
 	# Phone number default
-	phone_num.get_child(0).disabled = false
 	phone_num["theme_override_colors/default_color"] = Color("#5a5a5a") # Grey
+	phone_num.get_child(0).disabled = false
+	# set header to white, disable button, if correct
+	if self.name in GameManager.correct_and_sync_list:
+		phone_num["theme_override_colors/default_color"] = Color("White")
+		phone_num.get_child(0).disabled = true
+
 
 	# Setting up contact description
 	var bottom_description = contacts_manager.full_contact_right.get_child(2).get_child(0).get_child(0)
@@ -49,6 +54,7 @@ func set_contact() -> void:
 	recent_calls_header.text = "[b]Recent Calls:[/b]"
 	recent_calls_datetime.add_child(recent_calls_header)
 
+	# Recent call text
 	for date in recent_calls_dict.keys():
 		var date_description = CALL_DESCRIPTION.instantiate()
 		date_description.text = date

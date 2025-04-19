@@ -34,10 +34,10 @@ func show_transition(_new_node: Node, transition_sprite: Sprite2D, transition_ty
 		transition_tween.tween_property(transition_sprite, "position", Vector2(0,-1200), 2)
 	if transition_type == TransitionType.SwipeRight:
 		transition_tween.set_trans(Tween.TRANS_QUINT)
-		transition_tween.tween_property(transition_sprite, "position", Vector2(-1440,0), 1)
+		transition_tween.tween_property(transition_sprite, "position", Vector2(-1440,0), 0.5)
 	if transition_type == TransitionType.SwipeLeft:
 		transition_tween.set_trans(Tween.TRANS_QUINT)
-		transition_tween.tween_property(transition_sprite, "position", Vector2(1400,0), 1)
+		transition_tween.tween_property(transition_sprite, "position", Vector2(1400,0), 0.5)
 
 	# remove node after transition
 	transition_tween.finished.connect(transition_sprite.queue_free)
