@@ -72,7 +72,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Title" type="Label" parent="BackgroundImage/MarginContainer/Menu/Texts"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 31
 text = "new phone, who dis?"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -100,7 +100,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "just kidding, but 
 I don't think your contacts 
-transfered over, my bad"
+transferred over, my bad"
 horizontal_alignment = 1
 vertical_alignment = 1
 

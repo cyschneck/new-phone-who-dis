@@ -44,7 +44,7 @@
 		"icon": "icon_path",
 		"description": "This is a description, DN, job",
 		"number": "303-444-4444",
-		"ringtone": "Smooth Jazz",
+		"ringtone": "Alarm",
 		"recent_calls": {
 			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
 			"5/3/2025 10:49 AM": "Missed Call",
@@ -57,11 +57,9 @@
 		"icon": "icon_path",
 		"description": "This is a description, StandardTime",
 		"number": "202-762-1401",
-		"ringtone": "Smooth Jazz",
+		"ringtone": "Default",
 		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+			"4/5/2025 10:49 AM": "Outgoing Call 33 seconds",
 		}
 	},
 	"contact 6": {
@@ -70,11 +68,9 @@
 		"icon": "icon_path",
 		"description": "This is a description, poison",
 		"number": "800-222-1222",
-		"ringtone": "Smooth Jazz",
+		"ringtone": "Default",
 		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+			"5/3/2025 10:49 AM": "Outgoing Call 3 minutes",
 		}
 	},
 	"contact 7": {
@@ -161,7 +157,7 @@
 		"icon": "icon_path",
 		"description": "This is a description, CF",
 		"number": "666-666-4444",
-		"ringtone": "Smooth Jazz",
+		"ringtone": "Default",
 		"recent_calls": {
 			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
 			"5/3/2025 10:49 AM": "Missed Call",
@@ -200,7 +196,7 @@
 		"icon": "icon_path",
 		"description": "This is a description, GD, stepdad",
 		"number": "333-222-1112",
-		"ringtone": "Smooth Jazz",
+		"ringtone": "Sci-fi Chime",
 		"recent_calls": {
 			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
 			"5/3/2025 10:49 AM": "Missed Call",
@@ -213,7 +209,7 @@
 		"icon": "icon_path",
 		"description": "This is description, mom",
 		"number": "333-555-1112",
-		"ringtone": "Smooth Jazz",
+		"ringtone": "Classic Ringtone",
 		"recent_calls": {
 			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
 			"5/3/2025 10:49 AM": "Missed Call",
@@ -226,7 +222,7 @@
 		"icon": "icon_path",
 		"description": "Dad",
 		"number": "720-555-0220",
-		"ringtone": "Smooth Jazz",
+		"ringtone": "Default",
 		"recent_calls": {
 			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
 			"5/3/2025 10:49 AM": "Missed Call",
@@ -241,9 +237,8 @@
 		"number": "999-555-9999",
 		"ringtone": "Smooth Jazz",
 		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+			"3/15/2025 10:49 AM": "Outgoing Call 4 hours",
+			"3/14/2025 9:05 AM": "Incoming Call 3 hours"
 		}
 	},
 	"contact 20": {
