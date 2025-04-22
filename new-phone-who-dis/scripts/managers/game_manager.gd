@@ -32,6 +32,9 @@ var sorted_contacts: Array = []
 # Stores a contact with its order element and full name
 var contact_ordering: Dictionary = {}
 
+# END GAME
+const NEW_MESSAGE_ALERT = preload("res://scenes/manager/new_message_alert.tscn")
+
 func _ready() -> void:
 	# Load JSON data
 	load_json_data(MESSAGES_JSON)
@@ -107,7 +110,6 @@ func check_for_correct() -> void:
 		self.add_child(correct_popup)
 		get_tree().paused = true
 
-
 func order_contacts() -> void:
 	# collect all last names (or first names if no last available)
 	for contact_key in contact_list_data.keys():
@@ -133,3 +135,25 @@ func display_faq(scene_name: String) -> void:
 		faq_popup.get_child(2).visible = false
 		faq_popup.get_child(3).visible = true
 	self.add_child(faq_popup)
+
+func display_new_message_alert() -> void:
+	# display end game message
+	var new_message_popup = NEW_MESSAGE_ALERT.instantiate()
+	get_tree().paused = true
+	self.add_child(new_message_popup)
+
+func trigger_end_game() -> void:
+	# trigger end game
+	if get_tree().current_scene.name == "contacts":
+		# transition to main messages
+		const MESSAGES_SCENE = "res://scenes/_main/messages.tscn"
+		SceneTransition.change_scene(MESSAGES_SCENE, 3)
+		await get_tree().create_timer(0.1).timeout # wait for scene to transition
+	
+	# display end credits
+	set_guess_dictionary("555-555-5555", "End Credits")
+	correct_and_sync_list.append("End Credits")
+	var message_manager = get_tree().get_nodes_in_group("managers")[0]
+	message_manager.contacts_list.get_child(0).visible = true
+	message_manager.contacts_list.get_child(1).visible = true
+	message_manager.focus_on_first_element(1)

@@ -33,9 +33,13 @@ func _ready() -> void:
 
 	# populate the contacts list with starting values
 	populate_contacts_message_list()
+	
+	# click on first contact at the start, that is not the end credits
+	focus_on_first_element(3)
 
+func focus_on_first_element(first_contact_index: int) -> void:
 	# click on first contact at the start
-	var first_contact = contacts_list.get_children()[1]
+	var first_contact = contacts_list.get_child(first_contact_index)
 	current_contact = first_contact
 	first_contact.get_child(2).grab_focus() # select first_contact
 	first_contact.populate_message_right_field(first_contact.name)
@@ -84,6 +88,10 @@ func populate_contacts_message_list() -> void:
 		contacts_list.add_child(new_contact)
 		var new_h_sep = HSeparator.new()
 		contacts_list.add_child(new_h_sep)
+
+	# hide first contact message with end credits
+	contacts_list.get_child(0).visible = false
+	contacts_list.get_child(1).visible = false
 
 func determine_datetime(datetime: String) -> String:
 	# set displayed datetime to last string of the last text
