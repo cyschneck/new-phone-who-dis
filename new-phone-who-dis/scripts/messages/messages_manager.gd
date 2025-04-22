@@ -140,5 +140,13 @@ func _on_button_pressed() -> void:
 			var new_hsep = HSeparator.new()
 			remaining_contacts.add_child(new_hsep)
 
+	# hide "end credits" from selection options
+	var i = 0
+	for child in remaining_contacts.get_children():
+		if child is RichTextLabel:
+			if "End Credits" in child.text:
+				child.visible = false
+				remaining_contacts.get_child(i+1).visible = false
+		i += 1
 	# display popup
 	select_contact_popup.visible = true

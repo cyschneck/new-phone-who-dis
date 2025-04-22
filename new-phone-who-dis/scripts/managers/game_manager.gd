@@ -84,7 +84,7 @@ func check_for_correct() -> void:
 					# only add contacts not already synced
 					correct_guesses.append(guess_full_name)
 
-	if len(correct_guesses) == 2:
+	if len(correct_guesses) == 3:
 		# remove existing children
 		var correct_popup = CORRECT_POPUP.instantiate()
 		var correct_answers_box = correct_popup.get_child(1).get_child(1).get_child(0)

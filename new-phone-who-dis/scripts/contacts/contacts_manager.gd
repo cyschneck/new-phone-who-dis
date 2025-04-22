@@ -65,6 +65,17 @@ func populate_contacts_list() -> void:
 			# setup default contact based on first in list
 			first_contact = new_contact_name
 
+	# if end credits not found, do not display as contact option
+	var i = 0
+	for child in contact_list.get_children():
+		if child is RichTextLabel:
+			if "Credits" in child.text:
+				if "End Credits" not in GameManager.correct_and_sync_list:
+					child.visible = false
+					contact_list.get_child(i+1).visible = false
+		i += 1
+		
+			
 	# select first contact
 	first_contact.set_contact()
 
@@ -107,6 +118,15 @@ func populate_number_selection() -> void:
 	
 			var new_h_sep = HSeparator.new()
 			popup.add_child(new_h_sep)
+	
+	# hide end credits from selection
+	var i = 0
+	for child in popup.get_children():
+		if child is RichTextLabel:
+			if "555-555-5555" in child.text:
+				child.visible = false
+				popup.get_child(i+1).visible = false
+		i += 1
 
 func _on_select_number_pressed() -> void:
 	# display popup

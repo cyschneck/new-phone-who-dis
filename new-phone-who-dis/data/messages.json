@@ -62,14 +62,14 @@
 	}
   },
   "message 6": {
-	"contact_name": "Boyd",
+	"contact_name": "Eddie",
 	"messages": {
 		"4/29/2025 Sunday 11:41 AM": {
 		  "sender1": "Miss you",
 		  "sender2": "Miss you"
 		},
 		"4/29/2025 Sunday 1:41 PM": {
-		  "caller1": "yeah I bet",
+		  "caller1": "yeah I bet, Ed",
 		}
 	}
   },
@@ -78,7 +78,7 @@
 	"messages": {
 		"3/16/2025 Sunday 11:42 AM" : {
 		  "sender1": "contact six",
-		  "caller1": "this is the second message2-2",
+		  "caller1": "this is the second message2-2, buzz buzz",
 		}
 	}
   },
@@ -88,7 +88,7 @@
 		"1/6/2025 Monday 11:42 AM" : {
 		  "caller1": "contact seven",
 		  "caller2": "this is the second message2-2",
-		  "caller3": "this is the third message3-2"
+		  "caller3": "this is the third message3-2, snowy"
 		}
 	}
   },
@@ -98,7 +98,7 @@
 		"1/3/2025 Friday 11:42 AM" : {
 		  "sender1":"contact eight",
 		  "caller1": "this is the second message2-2",
-		  "sender2": "this is the third message3-2"
+		  "sender2": "this is the third message3-2, rushmore"
 		}
 	}
   },
@@ -108,17 +108,17 @@
 		"1/2/2025 Thursday 11:42 AM" : {
 		  "sender1": "contact nine",
 		  "sender2": "this is the second message2-2",
-		  "caller1": "this is the third message3-2"
+		  "caller1": "this is the third message3-2, work"
 		}
 	}
   },
   "message 11": {
-	"contact_name": "Eddie",
+	"contact_name": "Boyd",
 	"messages": {
 		"1/2/2025 Thursday 11:42 AM" : {
 		  "caller1": "contact ten",
 		  "sender1": "this is the second message2-2",
-		  "caller2": "this is the third message3-2"
+		  "caller2": "this is the third message3-2, annoying bro"
 		}
 	}
   },
@@ -126,7 +126,7 @@
 	"contact_name": "Sigrith Loudermilk",
 	"messages": {
 		"12/25/2025 Wednesday 5:40 PM": {
-		  "sender1": "Hi, this is your brother's roommate, he gave me your number",
+		  "sender1": "Hi, this is your brother's roommate, Sig, he gave me your number",
 		  "sender2": "Merry Christmas!",
 		  "caller1": "Merry Christmas"
 		}
