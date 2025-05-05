@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://ccvwhhb8t2b4t"]
+[gd_scene load_steps=11 format=3 uid="uid://ccvwhhb8t2b4t"]
 
 [ext_resource type="Script" uid="uid://cfmtt801jgikh" path="res://scripts/contacts/contacts_manager.gd" id="1_wdjsl"]
-[ext_resource type="Texture2D" uid="uid://cgh3l5dsp78rp" path="res://images/faq_button.png" id="2_wdjsl"]
 [ext_resource type="Script" uid="uid://bmfqpev5q4mic" path="res://scripts/managers/faq_button.gd" id="3_wdjsl"]
+[ext_resource type="Texture2D" uid="uid://brbbrbsweby87" path="res://images/contact_img.png" id="3_yln2p"]
 [ext_resource type="PackedScene" uid="uid://c5rfdd52g1a61" path="res://scenes/contacts/contact_name.tscn" id="4_q0cfa"]
-[ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="5_0si4w"]
+[ext_resource type="Texture2D" uid="uid://bqvka4c36hsuc" path="res://images/messages-icon-icons8.png" id="5_yln2p"]
 [ext_resource type="PackedScene" uid="uid://df3so81e18l2e" path="res://scenes/contacts/call_description.tscn" id="6_3nqok"]
 [ext_resource type="Script" uid="uid://da3kvyqflppek" path="res://scripts/contacts/return_to_messages.gd" id="6_gt0pa"]
 [ext_resource type="PackedScene" uid="uid://dy6mcnphodghq" path="res://scenes/contacts/popup_value.tscn" id="7_iprsr"]
+[ext_resource type="Texture2D" uid="uid://cxe5nainta57e" path="res://images/question_faq.png" id="8_yln2p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wdjsl"]
 bg_color = Color(0.00613931, 0.00613932, 0.00613931, 1)
@@ -184,7 +185,7 @@ theme_override_constants/separation = 10
 [node name="Icon" type="TextureRect" parent="BackgroundColor/FullContactRight/TopFrame/HeaderContact"]
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("5_0si4w")
+texture = ExtResource("3_yln2p")
 stretch_mode = 4
 
 [node name="HeaderContactName" type="RichTextLabel" parent="BackgroundColor/FullContactRight/TopFrame/HeaderContact"]
@@ -312,7 +313,7 @@ offset_top = 10.0
 offset_right = -21.0
 offset_bottom = 70.0
 grow_horizontal = 0
-texture_normal = ExtResource("5_0si4w")
+texture_normal = ExtResource("5_yln2p")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("6_gt0pa")
@@ -424,7 +425,7 @@ offset_left = 351.0
 offset_top = 21.0
 offset_right = 401.0
 offset_bottom = 71.0
-texture_normal = ExtResource("2_wdjsl")
+texture_normal = ExtResource("8_yln2p")
 stretch_mode = 0
 script = ExtResource("3_wdjsl")
 

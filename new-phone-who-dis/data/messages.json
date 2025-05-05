@@ -13,10 +13,17 @@
   "message 2": {
 	"contact_name": "Atheylna Dinn <3",
 	"messages": {
-		"5/4/2025 Sunday 9:49 PM": {
-		  "sender1": "missed you today, wanna grab dinner?",
+		"5/1/2025 Thursday 8:15 PM": {
+		  "caller1": "Ed texted me, again. Should I just change my number?",
+		  "sender1": "I can frame him for murder if you want.",
+		  "sender2": "<3",
+		  "caller2": "<3",
+		},
+		"5/4/2025 Sunday 3:49 PM": {
+		  "sender1": "Almost home",
+		  "sender2": "missed you this morning, wanna grab lunch?",
 		  "caller1": "you owe me a new phone, idiot",
-		  "sender2": "T_T",
+		  "sender3": "T_T",
 		},
 		"5/5/2025 Monday 10:49 AM": {
 		  "sender1": "new phone, who dis?",
@@ -28,77 +35,125 @@
   "message 3": {
 	"contact_name": "Mom",
 	"messages": {
-		"5/4/2025 Sunday 10:49 AM": {
-		  "sender1": "this is the second message2-2",
-		  "sender2": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
-		  "caller1": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
-		  "caller2": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
-		  "caller3": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
-		  "caller4": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
-		  "caller5": "this is a much longer test from another contact, specifically, from contact 2, it just goes on and on and on, it's very long and kind of tedious",
+		"5/3/2025 Monday 11:49 AM": {
+		  "sender1": "Yeah, just got your box, I'll bring it by when I vist",
+		  "sender2": "visit",
+		  "caller1": "Call your dad before you get here. He has the other copy of my keys.",
+		},
+		"5/4/2025 Sunday 9:12 PM": {
+		  "caller1": "Did Boyd call you?",
+		  "caller2": "He didn't leave a message, and I can't get through to him",
 		}
 	}
   },
   "message 4": {
 	"contact_name": "Giles Deacon",
 	"messages": {
+		"10/14/2024 Monday 9:05 AM": {
+			"sender1": "Happy Birthday, sweetheart!!!",
+			"caller1": "Time to party!!"
+		},
+		"4/4/2025 Friday 11:03 AM": {
+		  "caller1": "Bet you can't guess who broke their washing machine?",
+		  "caller2": "You'll never guess, it's impossible",
+		},
+		"5/2/2025 Friday 8:49 PM": {
+		  "sender1": "Text me when you get home, traffic looks awful.",
+		},
+		"5/2/2025 Friday 10:30 PM": {
+		  "caller1": "Home! Gonna get some sleep, love you!",
+		  "sender1": "Goodnight! Love you too",
+		},
 		"5/4/2025 Sunday 11:03 AM": {
 		  "sender1": "Call your mother",
 		  "caller1": "It went to voicemail"
 		},
-		"5/4/2025 Sunday 5:13 PM": {
-		  "sender2": "Call your mother"
-		}
 	}
   },
   "message 5": {
-	"contact_name": "Tim and Mary Fisher",
+	"contact_name": "Boyd",
 	"messages": {
-		"4/29/2025 Tuesday 3:33 PM": {
-		  "sender1": "checks due on the 30th",
-		  "sender2": "please make them effective by the first of march if you can...",
-		  "caller1": "I'll tell Grant"
-	}
+		"4/2/2025 Wednesday 9:21 AM" : {
+		  "sender1": "Did you know that humans and elephants pee at the same rate?",
+		  "sender2": "About 21 seconds, something to do with the fluid mechanics of the urethra",
+		  "sender3": "urethra",
+		  "sender4": "urethra",
+		  "sender5": "urethra",
+		  "caller1": "I guess I'm just glad you are studying",
+		  "sender6": "urethra",
+		  "caller2": "urethra",
+		},
+		"5/2/2025 Friday 11:42 AM" : {
+		  "caller1": "Mom wants to know why you called, you didn't leave a message",
+		  "sender1": "I'll call her back, nothing interesting",
+		  "caller2": "She'll be busy until late"
+		}
 	}
   },
   "message 6": {
 	"contact_name": "Eddie",
 	"messages": {
-		"4/29/2025 Sunday 11:41 AM": {
+		"5/1/2025 Sunday 1:41 AM": {
 		  "sender1": "Miss you",
 		  "sender2": "Miss you"
 		},
-		"4/29/2025 Sunday 1:41 PM": {
-		  "caller1": "yeah I bet, Ed",
+		"5/1/2025 Sunday 8:21 PM": {
+		  "caller1": "Who is this?",
 		}
 	}
   },
   "message 7": {
-	"contact_name": "Issac Honeylick",
+	"contact_name": "Tim and Mary Fisher",
 	"messages": {
-		"3/16/2025 Sunday 11:42 AM" : {
-		  "sender1": "contact six",
-		  "caller1": "this is the second message2-2, buzz buzz",
-		}
-	}
+		"3/1/2025 Saturday 3:35 PM": {
+		  "sender1": "Rentchecks due today, Mary will be there about noon...Anything need extra attention ?",
+		  "caller1": "I think we are good",
+		  "caller2": "Thanks"
+	},
+		"4/29/2025 Tuesday 3:33 PM": {
+		  "sender1": "checks due on the 30th",
+		  "sender2": "please make them effective by the first of June if you can...",
+		  "caller1": "I'll tell Grant",
+		  "sender2": "thank you...",
+		},
+	  },
   },
   "message 8": {
-	"contact_name": "Echo Wintermute",
+	"contact_name": "Issac Honeylick",
 	"messages": {
-		"1/6/2025 Monday 11:42 AM" : {
-		  "caller1": "contact seven",
-		  "caller2": "this is the second message2-2",
-		  "caller3": "this is the third message3-2, snowy"
+		"12/30/2024 Monday 2:21 PM" : {
+		  "sender1": "Thanks again",
+		  "sender2": "I know it was last minute",
+		  "caller1": "No worries",
+		},
+		"4/16/2025 Wednesday 11:42 AM" : {
+		  "sender1": "I overestimated how long it was going to take to get to your house, but I can wait until you guys are ready",
+		  "caller1": "You can come inside",
+		  "caller2": "Let me see if Grant is ready",
 		}
 	}
   },
   "message 9": {
 	"contact_name": "Grant Monument",
 	"messages": {
+		"12/13/2024 Friday 10:42 PM" : {
+		  "sender1":"ok, just landed",
+		  "caller1": "I'm parked at the nearby gas station",
+		  "caller2": "Text me when you get to the door at the departures terminal."
+		},
+		"12/13/2024 Friday 11:15 PM" : {
+		  "sender1":"ok, grabbing my bags, be there in about five minutes",
+		  "caller1": "Any update?",
+		  "caller2": "I see you, be right there."
+		},
+		"3/20/2025 Thursday 11:30 PM" : {
+		  "caller1":"Your burrito is in the fridge.",
+		},
 		"1/3/2025 Friday 11:42 AM" : {
-		  "sender1":"contact eight",
-		  "caller1": "this is the second message2-2",
-		  "sender2": "this is the third message3-2, rushmore"
+		  "sender1":"Did you see the rent increases?",
+		  "caller1": "yeah, thanks",
+		  "caller2": ":p",
+		  "sender2":":p",
 		}
 	}
   },
@@ -106,63 +161,23 @@
 	"contact_name": "Dough Nutty",
 	"messages": {
 		"1/2/2025 Thursday 11:42 AM" : {
-		  "sender1": "contact nine",
-		  "sender2": "this is the second message2-2",
-		  "caller1": "this is the third message3-2, work"
+		  "sender1": "Shift starts at 9",
+		  "sender2": "Issac said you are taking his shift",
+		  "caller1": "Ok, thanks"
 		}
 	}
   },
   "message 11": {
-	"contact_name": "Boyd",
-	"messages": {
-		"1/2/2025 Thursday 11:42 AM" : {
-		  "caller1": "contact ten",
-		  "sender1": "this is the second message2-2",
-		  "caller2": "this is the third message3-2, annoying bro"
-		}
-	}
-  },
-  "message 12": {
 	"contact_name": "Sigrith Loudermilk",
 	"messages": {
-		"12/25/2025 Wednesday 5:40 PM": {
+		"12/25/2024 Wednesday 5:40 PM": {
 		  "sender1": "Hi, this is your brother's roommate, Sig, he gave me your number",
 		  "sender2": "Merry Christmas!",
 		  "caller1": "Merry Christmas"
 		}
 	}
   },
-  "message 13": {
-	"contact_name": "Screech Atwater",
-	"messages": {
-		"12/20/2025 Wednesday 5:40 PM": {
-		  "sender1": "Screech",
-		  "sender2": "Atwater",
-		  "caller1": "Thanks"
-		}
-	}
-  },
-  "message 14": {
-	"contact_name": "Bathsheba Bannister",
-	"messages": {
-		"12/18/2025 Wednesday 5:40 PM": {
-		  "sender1": "Bannister",
-		  "sender2": "Like the lawyer",
-		  "caller1": "Thanks"
-		}
-	}
-  },
-  "message 15": {
-	"contact_name": "Calliope Farmer",
-	"messages": {
-		"12/15/2025 Wednesday 5:40 PM": {
-		  "sender1": "Cally",
-		  "sender2": "Farming",
-		  "caller1": "Buzz like a bee"
-		}
-	}
-  },
-  "message 16": {
+  "message 11": {
 	"contact_name": "Dad",
 	"messages": {
 		"10/14/2022 Friday 4:32 PM": {

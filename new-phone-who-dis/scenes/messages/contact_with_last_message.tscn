@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cmb6w2h80yo6f"]
 
 [ext_resource type="Script" uid="uid://yxcxfj6v4rdp" path="res://scripts/messages/select_message.gd" id="1_ichj6"]
-[ext_resource type="Texture2D" uid="uid://dlvsclu2wa70u" path="res://images/icon.svg" id="2_8bwgx"]
+[ext_resource type="Texture2D" uid="uid://brbbrbsweby87" path="res://images/contact_img.png" id="2_ichj6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ichj6"]
 bg_color = Color(0.176471, 0.682353, 0.568627, 1)
@@ -24,7 +24,7 @@ offset_top = -20.0
 offset_right = 61.0
 offset_bottom = 31.0
 grow_vertical = 2
-texture = ExtResource("2_8bwgx")
+texture = ExtResource("2_ichj6")
 expand_mode = 3
 stretch_mode = 4
 

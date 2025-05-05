@@ -13,19 +13,6 @@
 		}
 	},
 	"contact 2": {
-		"first_name": "Echo",
-		"last_name": "Wintermute",
-		"icon": "icon_path",
-		"description": "This is a description, EW, 303-891-0123",
-		"number": "303-891-0123",
-		"ringtone": "Rock and Roll",
-		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
-		}
-	},
-	"contact 3": {
 		"first_name": "Grant",
 		"last_name": "Monument",
 		"icon": "icon_path",
@@ -38,7 +25,7 @@
 			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
 		}
 	},
-	"contact 4": {
+	"contact 3": {
 		"first_name": "Dough",
 		"last_name": "Nutty",
 		"icon": "icon_path",
@@ -51,7 +38,7 @@
 			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
 		}
 	},
-	"contact 5": {
+	"contact 4": {
 		"first_name": "Naval Observatory Standard Time",
 		"last_name": "",
 		"icon": "icon_path",
@@ -62,7 +49,7 @@
 			"4/5/2025 10:49 AM": "Outgoing Call 33 seconds",
 		}
 	},
-	"contact 6": {
+	"contact 5": {
 		"first_name": "Poison Control",
 		"last_name": "",
 		"icon": "icon_path",
@@ -73,7 +60,7 @@
 			"5/3/2025 10:49 AM": "Outgoing Call 3 minutes",
 		}
 	},
-	"contact 7": {
+	"contact 6": {
 		"first_name": "Eddie",
 		"last_name": "",
 		"icon": "icon_path",
@@ -86,20 +73,7 @@
 			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
 		}
 	},
-	"contact 8": {
-		"first_name": "Screech",
-		"last_name": "Atwater",
-		"icon": "icon_path",
-		"description": "This is a description, SA, 303-888-8886",
-		"number": "303-888-8886",
-		"ringtone": "Smooth Jazz",
-		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
-		}
-	},
-	"contact 9": {
+	"contact 7": {
 		"first_name": "Sigrith",
 		"last_name": "Loudermilk",
 		"icon": "icon_path",
@@ -112,20 +86,7 @@
 			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
 		}
 	},
-	"contact 10": {
-		"first_name": "Bathsheba",
-		"last_name": "Bannister",
-		"icon": "icon_path",
-		"description": "This is a description, BB, 999-999-9999",
-		"number": "999-999-9999",
-		"ringtone": "Smooth Jazz",
-		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
-		}
-	},
-	"contact 11": {
+	"contact 8": {
 		"first_name": "Atheylna",
 		"last_name": "Dinn <3",
 		"icon": "icon_path",
@@ -138,20 +99,7 @@
 			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
 		}
 	},
-	"contact 13": {
-		"first_name": "Calliope",
-		"last_name": "Farmer",
-		"icon": "icon_path",
-		"description": "This is a description, CF, 666-666-4444",
-		"number": "666-666-4444",
-		"ringtone": "Default",
-		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
-		}
-	},
-	"contact 15": {
+	"contact 9": {
 		"first_name": "Giles",
 		"last_name": "Deacon",
 		"icon": "icon_path",
@@ -164,7 +112,7 @@
 			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
 		}
 	},
-	"contact 16": {
+	"contact 10": {
 		"first_name": "Mom",
 		"last_name": "",
 		"icon": "icon_path",
@@ -173,11 +121,12 @@
 		"ringtone": "Classic Ringtone",
 		"recent_calls": {
 			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
+			"5/5/2025 10:40 AM": "Outgoing Call 33 seconds",
+			"5/4/2025 10:49 AM": "Missed Call",
 			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
 		}
 	},
-	"contact 17": {
+	"contact 11": {
 		"first_name": "Dad",
 		"last_name": "",
 		"icon": "icon_path",
@@ -190,7 +139,7 @@
 			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
 		}
 	},
-	"contact 18": {
+	"contact 12": {
 		"first_name": "Oma",
 		"last_name": "",
 		"icon": "icon_path",
@@ -202,7 +151,7 @@
 			"3/14/2025 9:05 AM": "Incoming Call 3 hours"
 		}
 	},
-	"contact 19": {
+	"contact 13": {
 		"first_name": "Tim and Mary",
 		"last_name": "Fisher",
 		"icon": "icon_path",
@@ -215,7 +164,7 @@
 			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
 		}
 	},
-	"contact 20": {
+	"contact 14": {
 		"first_name": "Boyd",
 		"last_name": "",
 		"icon": "icon_path",
@@ -228,7 +177,7 @@
 			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
 		}
 	},
-	"contact 21": {
+	"contact 15": {
 		"first_name": "End",
 		"last_name": "Credits",
 		"icon": "icon_path",
