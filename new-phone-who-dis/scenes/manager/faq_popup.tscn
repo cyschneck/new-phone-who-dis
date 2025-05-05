@@ -88,7 +88,8 @@ vertical_alignment = 1
 
 [node name="Description" type="RichTextLabel" parent="Container/ColorRect/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Select a Contact from a list of Possible Contacts. When three correct contacts have been selected, contacts will \"sync\" and verify the choices"
+text = "Select a contact from list of possible choices. With three correct contacts, contacts are \"synced\". All contacts are within the contact lists
+Flip between messages and full contact list in the top right"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -105,7 +106,7 @@ text = "Got it"
 
 [node name="MessagesArrow" type="Line2D" parent="."]
 position = Vector2(-41, 26)
-points = PackedVector2Array(633, 369, 796, 55)
+points = PackedVector2Array(653, 459, 796, 55)
 default_color = Color(0.724837, 0.159743, 0.173209, 1)
 
 [node name="Line2D" type="Line2D" parent="MessagesArrow"]
@@ -119,7 +120,7 @@ default_color = Color(0.72549, 0.160784, 0.172549, 1)
 
 [node name="ContactsArrow" type="Line2D" parent="."]
 position = Vector2(-40, 233)
-points = PackedVector2Array(707, 219, 796, 55)
+points = PackedVector2Array(660, 254, 796, 55)
 default_color = Color(0.724837, 0.159743, 0.173209, 1)
 
 [node name="Line2D" type="Line2D" parent="ContactsArrow"]
@@ -128,6 +129,21 @@ default_color = Color(0.72549, 0.160784, 0.172549, 1)
 
 [node name="Line2D2" type="Line2D" parent="ContactsArrow"]
 position = Vector2(-2, -2)
+points = PackedVector2Array(811, 91, 795, 54)
+default_color = Color(0.72549, 0.160784, 0.172549, 1)
+
+[node name="Contact_Message" type="Line2D" parent="."]
+position = Vector2(158, 51)
+points = PackedVector2Array(524, 507, 962, 13)
+default_color = Color(0.724837, 0.159743, 0.173209, 1)
+
+[node name="Line2D" type="Line2D" parent="Contact_Message"]
+position = Vector2(165, -47)
+points = PackedVector2Array(756, 70, 799, 54)
+default_color = Color(0.72549, 0.160784, 0.172549, 1)
+
+[node name="Line2D2" type="Line2D" parent="Contact_Message"]
+position = Vector2(163, -49)
 points = PackedVector2Array(811, 91, 795, 54)
 default_color = Color(0.72549, 0.160784, 0.172549, 1)
 

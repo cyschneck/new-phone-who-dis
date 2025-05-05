@@ -51,7 +51,6 @@ func populate_contacts_list() -> void:
 		new_contact_name.text = full_name
 		new_contact_name.first_name = contact_data["first_name"]
 		new_contact_name.last_name = contact_data["last_name"]
-		new_contact_name.icon_path = contact_data["icon"]
 		new_contact_name.description = contact_data["description"]
 		new_contact_name.number = contact_data["number"]
 		new_contact_name.ringtone = contact_data["ringtone"]

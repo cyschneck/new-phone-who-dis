@@ -2,47 +2,38 @@
 	"contact 1": {
 		"first_name": "Issac",
 		"last_name": "Honeylick",
-		"icon": "icon_path",
-		"description": "This is a description, IH, 111-111-1111",
+		"description": "Shift Manager",
 		"number": "111-111-1111",
-		"ringtone": "Smooth Jazz",
+		"ringtone": "Christmas Music",
 		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+			"12/27/2024 10:49 AM": "Incoming Call 5 minutes",
 		}
 	},
 	"contact 2": {
 		"first_name": "Grant",
 		"last_name": "Monument",
-		"icon": "icon_path",
-		"description": "This is a description, GM, roommate, 303-333-333",
+		"description": "Friend down the hall",
 		"number": "303-333-333",
-		"ringtone": "Bell Tower",
+		"ringtone": "Blues",
 		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+			"5/3/2025 9:15 AM": "Missed Call",
 		}
 	},
 	"contact 3": {
 		"first_name": "Dough",
 		"last_name": "Nutty",
-		"icon": "icon_path",
-		"description": "This is a description, DN, job, 303-444-4444",
+		"description": "I should get a new job",
 		"number": "303-444-4444",
 		"ringtone": "Alarm",
 		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+			"4/17/2025 2:15 PM": "Missed call",
+			"4/15/2025 2:15 PM": "Missed Call",
 		}
 	},
 	"contact 4": {
-		"first_name": "Naval Observatory Standard Time",
+		"first_name": "Naval Observatory Time",
 		"last_name": "",
-		"icon": "icon_path",
-		"description": "This is a description, StandardTime, 202-762-1401",
+		"description": "Call for standard time",
 		"number": "202-762-1401",
 		"ringtone": "Default",
 		"recent_calls": {
@@ -52,8 +43,7 @@
 	"contact 5": {
 		"first_name": "Poison Control",
 		"last_name": "",
-		"icon": "icon_path",
-		"description": "This is a description, poison, 800-222-1222",
+		"description": "Saving this number feels like a failure of some kind",
 		"number": "800-222-1222",
 		"ringtone": "Default",
 		"recent_calls": {
@@ -63,49 +53,42 @@
 	"contact 6": {
 		"first_name": "Eddie",
 		"last_name": "",
-		"icon": "icon_path",
-		"description": "Ignore his lies, 303-777-777",
+		"description": "Ignore him",
 		"number": "303-777-777",
-		"ringtone": "Smooth Jazz",
+		"ringtone": "Alarm",
 		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+			"5/3/2025 9:40 AM": "Missed Call",
+			"5/2/2025 2:20 PM": "Missed Call",
+			"5/1/2025 1:49 PM": "Missed Call",
 		}
 	},
 	"contact 7": {
 		"first_name": "Sigrith",
 		"last_name": "Loudermilk",
-		"icon": "icon_path",
-		"description": "This is a description, SL, 303-833-3388",
+		"description": "Roommate",
 		"number": "303-833-3388",
 		"ringtone": "Smooth Jazz",
 		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+			"5/1/2025 11:39 AM": "Missed Call",
 		}
 	},
 	"contact 8": {
 		"first_name": "Atheylna",
 		"last_name": "Dinn <3",
-		"icon": "icon_path",
-		"description": "This is a description, AD, 444-555-6669",
+		"description": "<3 <3 <3",
 		"number": "444-555-6669",
-		"ringtone": "Smooth Jazz",
+		"ringtone": "Epic Theme Song",
 		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+			"5/4/2025 10:10 AM": "Outgoing Call 33 seconds",
+			"5/3/2025 9:19 AM": "Missed Call",
 		}
 	},
 	"contact 9": {
 		"first_name": "Giles",
 		"last_name": "Deacon",
-		"icon": "icon_path",
-		"description": "This is a description, GD, stepdad, 333-222-1112",
+		"description": "At least 75% puns",
 		"number": "333-222-1112",
-		"ringtone": "Sci-fi Chime",
+		"ringtone": "Sci-Fi Chime",
 		"recent_calls": {
 			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
 			"5/3/2025 10:49 AM": "Missed Call",
@@ -115,8 +98,7 @@
 	"contact 10": {
 		"first_name": "Mom",
 		"last_name": "",
-		"icon": "icon_path",
-		"description": "This is description, mom, 333-555-1112",
+		"description": "Lady I met at some point",
 		"number": "333-555-1112",
 		"ringtone": "Classic Ringtone",
 		"recent_calls": {
@@ -129,58 +111,60 @@
 	"contact 11": {
 		"first_name": "Dad",
 		"last_name": "",
-		"icon": "icon_path",
-		"description": "Dad, 720-555-0220",
+		"description": "New number",
 		"number": "720-555-0220",
 		"ringtone": "Default",
 		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+			"10/14/2024 7:49 PM": "Outgoing Call 10 seconds",
 		}
 	},
 	"contact 12": {
 		"first_name": "Oma",
 		"last_name": "",
-		"icon": "icon_path",
-		"description": "This is a description, grandmother, 999-555-9999",
+		"description": "At least 70% cats",
 		"number": "999-555-9999",
 		"ringtone": "Smooth Jazz",
 		"recent_calls": {
-			"3/15/2025 10:49 AM": "Outgoing Call 4 hours",
-			"3/14/2025 9:05 AM": "Incoming Call 3 hours"
+			"4/20/2025 10:49 AM": "Outgoing Call 3 hours",
+			"4/15/2025 10:49 AM": "Outgoing Call 4 hours",
+			"3/15/2025 10:49 AM": "Outgoing Call 2.5 hours",
 		}
 	},
 	"contact 13": {
 		"first_name": "Tim and Mary",
 		"last_name": "Fisher",
-		"icon": "icon_path",
-		"description": "Landlords, 720-555-1111",
+		"description": "Landlords",
 		"number": "720-555-1111",
 		"ringtone": "Smooth Jazz",
 		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
-			"5/3/2025 10:49 AM": "Missed Call",
-			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
+			"5/1/2025 10:49 AM": "Outgoing Call 33 seconds",
+			"4/1/2025 10:49 AM": "Outgoing Call 33 seconds",
 		}
 	},
 	"contact 14": {
 		"first_name": "Boyd",
 		"last_name": "",
-		"icon": "icon_path",
-		"description": "Brother, 303-555-0102",
+		"description": "At least 70% puns",
 		"number": "303-555-0102",
-		"ringtone": "Smooth Jazz",
+		"ringtone": "Crickets",
 		"recent_calls": {
-			"5/5/2025 10:49 AM": "Outgoing Call 33 seconds",
 			"5/3/2025 10:49 AM": "Missed Call",
 			"10/14/2024 9:05 AM": "Incoming Call 4 minutes"
 		}
 	},
 	"contact 15": {
+		"first_name": "Ignore",
+		"last_name": "Me",
+		"description": "No, really, ignore me",
+		"number": "248-434-5508",
+		"ringtone": "Rocking and Rolling",
+		"recent_calls": {
+			"10/14/2024 9:05 AM": "Outgoing Call 10 seconds",
+		}
+	},
+	"contact 16": {
 		"first_name": "End",
 		"last_name": "Credits",
-		"icon": "icon_path",
 		"description": "Thanks for playing!",
 		"number": "555-555-5555",
 		"ringtone": "Smooth Jazz",
