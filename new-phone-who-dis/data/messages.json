@@ -36,13 +36,13 @@
 	"contact_name": "Mom",
 	"messages": {
 		"5/3/2025 Monday 11:49 AM": {
-		  "sender1": "Yeah, just got your box, I'll bring it by when I vist",
-		  "sender2": "visit",
-		  "caller1": "Call your dad before you get here. He has the other copy of my keys.",
+		  "caller1": "Yeah, just got your box, I'll bring it by when I vist",
+		  "caller2": "visit",
+		  "sender1": "Call your dad before you get here. He has the other copy of my keys.",
 		},
 		"5/4/2025 Sunday 9:12 PM": {
-		  "caller1": "Did Boyd call you?",
-		  "caller2": "He didn't leave a message, and I can't get through to him",
+		  "sender1": "Did Boyd call you?",
+		  "sender2": "He didn't leave a message, and I can't get through to him",
 		}
 	}
   },
